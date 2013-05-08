@@ -1,0 +1,102 @@
+.content
+{
+	.listview
+	{
+		.list-row
+		{
+			margin-bottom: 2px;
+			background-color: white;
+			position:relative;
+
+			.readmore
+			{
+				display:inline-block;
+				letter-spacing: 10px;
+				text-transform: uppercase;
+				color: @grayDark;
+				font-size: 12px;
+				font-weight: normal;
+				text-rendering: optimizelegibility;
+				text-decoration: none;
+			}
+
+			h3
+			{
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-size: 26px;
+			}
+
+			.span8
+			{
+				padding: 1rem 2.5rem 1rem 2rem;
+			}
+
+			.span12
+			{
+				padding: 1rem 2.5rem 1rem 2rem;
+
+				//1.5rem 2.5rem 2.4rem 2rem;
+			}
+
+			p
+			{
+				margin: 0;
+			}
+		}
+	}
+
+	.news
+	{
+		.container
+		{
+			background-color: white;
+
+			.list-row
+			{
+				background-color: @grayLight;
+
+				.date
+				{
+					font-size: 11px;
+					margin-bottom: 5px;
+				}
+
+				.span8, .span12
+				{
+					padding: 1.5rem 2.5rem 2.4rem 1.5rem;
+				}
+
+				h3
+				{
+					letter-spacing: 2px;
+					margin: 0 0 5px 0;
+					font-size: 32px;
+				}
+
+				.share-btn
+				{
+					position: absolute;
+					top:20px;
+					right:5%;
+					.opacity(50);
+					img
+					{
+						height: 15px;
+					}
+
+					&:hover
+					{
+						.opacity(100);
+					}
+				}
+
+				&:last-child
+				{	
+					margin-bottom: 0;
+				}
+
+			}
+		}
+	}
+}

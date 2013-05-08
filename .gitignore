@@ -1,0 +1,9 @@
+fuel/app/logs
+
+public/files/thumb
+public/files/temp
+public/files/full
+
+.DS_Store
+*.orig
+.idea/

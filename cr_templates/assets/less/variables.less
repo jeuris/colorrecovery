@@ -1,0 +1,359 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+.colorbackground {
+  height: 100%;
+  background: url("../images/CR_background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // IE fix
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale')";
+}
+
+ul.slidertab li, ul.slidertab li.active {
+  width: 160px;
+  height:7px;
+  margin-right: 10px;
+  display: block;
+  list-style-type: none;
+  text-indent: -9999px;
+  font-size: 20px;
+  background: @white;
+  opacity: 0.5;
+  float: left;
+}
+
+ul.slidertab li.active {
+  opacity: 1.0;
+}
+
+.frontpage_logo {
+  padding-top:20%;
+  padding-left:42px;
+}
+
+footer {
+  position: fixed;
+  bottom: 80px;
+}
+
+.page-content {
+
+  background: rgba(255,255,255,0.8);
+  height:100%;
+  position: absolute;
+  top:0px;
+  right: 0px;
+  z-index:1;
+  padding-top: 140px;
+}
+
+hr.dashedline {
+  height:14px; /* specify a height for this hr */
+  overflow:hidden;
+}
+
+hr.dashedline:after {
+  content:"_________________________________________________________________________________";
+  letter-spacing: 4px; /* Use letter-spacing to increase space between dots*/
+  color:@grayDarker;
+}
+
+
+.absoluteCenterWrapper {
+  position:relative; /* Contains the image in the div */
+  margin-left:30px;
+}
+
+.absoluteCenterWrapper p {
+  margin:1em 0 1em 4em;
+  padding-left:.5em;
+}
+
+.absoluteCenterContact {
+  position:relative; /* Contains the image in the div */
+  margin-left:0px;
+  padding-top:0px;
+  pading-left:40px;
+  border-bottom: 1px dashed @grayLight;
+  border-right:1px dashed @grayLight;
+  &:first-child{ border-top: 1px dashed @grayLight; margin-top:20px; }
+}
+
+.absoluteCenterContact img{
+  padding-left:40px;
+
+}
+
+.absoluteCenterContact p {
+  margin:0 0 1em 6.5em;
+  padding-left:.5em;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:20px;
+}
+
+
+/* Positioning */
+.absoluteCenter {
+  margin:auto; /* Required */
+  position:absolute; /* Required */
+  top:0;bottom:0; /* Aligns Vertically */
+}
+
+/* Sizing - resizes down to avoid cutting off */
+.absoluteCenter { /* Fallback Sizing */
+  max-height:100%;
+  max-width:100%;
+}
+
+.credits {
+  color: @grayLight;
+  font-family: 'proxima_novaregular_italic';
+  font-size: 12px;
+
+}
+
+.borderleft {
+  border-left: 1px dashed black;
+}
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #3c3c3b;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@red:                   #be1e2d;
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @gray;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             #be1e2d;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Typography
+// -------------------------
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src: url('../fonts/proximanova-bold.eot');
+  src: url('../fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proximanova-bold.woff') format('woff'),
+  url('../fonts/proximanova-bold.ttf') format('truetype'),
+  url('../fonts/proximanova-bold.svg#proxima_novabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaregular';
+  src: url('../fonts/proximanova-regular.eot');
+  src: url('../fonts/proximanova-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proximanova-regular.woff') format('woff'),
+  url('../fonts/proximanova-regular.ttf') format('truetype'),
+  url('../fonts/proximanova-regular.svg#proxima_novaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaregular_italic';
+  src: url('../fonts/proximanova-regularit.eot');
+  src: url('../fonts/proximanova-regularit.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proximanova-regularit.woff') format('woff'),
+  url('../fonts/proximanova-regularit.ttf') format('truetype'),
+  url('../fonts/proximanova-regularit.svg#proxima_novaregular_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url('../fonts/proximanova-semibold.eot');
+  src: url('../fonts/proximanova-semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proximanova-semibold.woff') format('woff'),
+  url('../fonts/proximanova-semibold.ttf') format('truetype'),
+  url('../fonts/proximanova-semibold.svg#proxima_novasemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novalight';
+  src: url('../fonts/proximanova-light.eot');
+  src: url('../fonts/proximanova-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/proximanova-light.woff') format('woff'),
+  url('../fonts/proximanova-light.ttf') format('truetype'),
+  url('../fonts/proximanova-light.svg#proxima_novalight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@sansFontFamily:        "proxima_novasemibold", Helvetica, Arial, sans-serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         @grayDark; // empty to use BS default, @textColor
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeSmall:         @baseFontSize * 0.85; // ~12px
+@fontSizeMini:          @baseFontSize * 0.75; // ~11px
+
+@paddingLarge:          11px 19px; // 44px
+@paddingSmall:          2px 10px;  // 26px
+@paddingMini:           0 6px;   // 22px
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1030;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:          "../img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+
+// Hr border color
+// -------------------------
+@hrBorder:                @grayLighter;
+
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+@wellBackground:                  #f5f5f5;
+
+
+// Navbar
+// -------------------------
+@navbarCollapseWidth:             979px;
+@navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
+
+@navbarHeight:                    45px;
+@navbarBackgroundHighlight:       #ffffff;
+@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+@navbarBorder:                    darken(@navbarBackground, 12%);
+
+@navbarText:                      #777;
+@navbarLinkColor:                 #777;
+@navbarLinkColorHover:            @red;
+@navbarLinkColorActive:           @gray;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+
+@navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+@navbarInverseBackground:                #111111;
+@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBorder:                    #252525;
+
+@navbarInverseText:                      @grayLight;
+@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    #ccc;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+
+
+// GRID
+// --------------------------------------------------
+
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);

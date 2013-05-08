@@ -1,0 +1,317 @@
+//
+// Navbars (Redux)
+// --------------------------------------------------
+
+
+// COMMON STYLES
+// -------------
+
+// Base class and wrapper
+.navbar {
+  overflow: visible;
+  z-index:2;
+  background-color: transparent;
+  position: fixed;
+  right:0px;
+  margin-top: 40px;
+  display: inline-table;
+  float: right;;
+  margin-bottom: @baseLineHeight;
+
+
+  // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+  *position: relative;
+  *z-index: 2;
+}
+
+// Inner for background effects
+// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+  min-height: @navbarHeight;
+  padding-left:  20px;
+  padding-right: 0px;
+  margin-right: 0px;
+
+  // Prevent floats from breaking the navbar
+  .clearfix();
+}
+
+// Set width to auto for default container
+// We then reset it for fixed navbars in the #gridSystem mixin
+.navbar .container {
+  width: auto;
+}
+
+// Override the default collapsed state
+.nav-collapse.collapse {
+  height: auto;
+  overflow: visible;
+}
+
+
+
+
+// Janky solution for now to account for links outside the .nav
+// -------------------------
+.navbar-link {
+  color: @navbarLinkColor;
+  &:hover,
+  &:focus {
+    color: @navbarLinkColorHover;
+  }
+}
+
+// Dividers in navbar
+// -------------------------
+.navbar .divider-vertical {
+  height: @navbarHeight;
+  margin: 0 9px;
+  border-left: 1px solid @navbarBackground;
+  border-right: 1px solid @navbarBackgroundHighlight;
+}
+
+
+
+// Static navbar
+// -------------------------
+
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0; // remove 18px margin for default navbar
+  .navbar-inner {
+    .border-radius(0);
+  }
+}
+
+
+
+// Fixed navbar
+// -------------------------
+
+// Shared (top/bottom) styles
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: @zindexFixedNavbar;
+  margin-bottom: 0; // remove 18px margin for default navbar
+}
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  border-width: 0 0 1px;
+}
+.navbar-fixed-bottom .navbar-inner {
+  border-width: 1px 0 0;
+}
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+  padding-left:  0;
+  padding-right: 0;
+  .border-radius(0);
+}
+
+// Reset container width
+// Required here as we reset the width earlier on and the grid mixins don't override early enough
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  #grid > .core > .span(@gridColumns);
+}
+
+// Fixed to top
+.navbar-fixed-top {
+  top: 0;
+}
+.navbar-fixed-top,
+.navbar-static-top {
+  .navbar-inner {
+    .box-shadow(~"0 1px 10px rgba(0,0,0,.1)");
+  }
+}
+
+// Fixed to bottom
+.navbar-fixed-bottom {
+  bottom: 0;
+  .navbar-inner {
+    .box-shadow(~"0 -1px 10px rgba(0,0,0,.1)");
+  }
+}
+
+
+
+// NAVIGATION
+// ----------
+
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.navbar .nav.pull-right {
+  float: right; // redeclare due to specificity
+  margin-right: 0; // remove margin on float right nav
+}
+.navbar .nav > li {
+   float: left;
+   list-style-type: none;
+   padding-top: 14px;
+   padding-bottom:12px;
+   font-size: 12px;
+   letter-spacing: .1em;
+   background-color: @white;
+   font-family: 'proxima_novaregular';
+  .box-shadow(0 3px 8px rgba(0,0,0,.125));
+
+ }
+
+.navbar .nav > li:first-child{
+  float: left;
+  list-style-type: none;
+  padding-top: 0px;
+  padding-bottom:0px;
+  background-color: @white;
+  display: block;
+  .box-shadow(0 3px 8px rgba(0,0,0,.125));
+  margin-right:8px;
+  background: url("../images/CR_logo_icon_header.svg") no-repeat ;
+  background-size: 46px 46px;
+  width: 46px;
+  height: 46px;
+}
+
+.navbar .nav > li:first-child a{
+  padding-top: 13px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background-size: 46px 46px;
+  width: 46px;
+  height: 46px;
+  line-height: 40px;
+
+}
+
+.navbar .nav > li:first-child:hover{
+  background: url("../images/CR_logo_icon_header_gray.svg") no-repeat ;
+  background-size: 46px 46px;
+  width: 46px;
+  height: 46px;
+}
+
+// Links
+.navbar .nav > li > a {
+  float: none;
+  // Vertically center the text given @navbarHeight
+  padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
+  color: @navbarLinkColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 20px;
+  text-shadow: 0 1px 0 @navbarBackgroundHighlight;
+}
+
+.navbar .nav > li.heart {
+  background: @white url("../images/CR_nav_heart.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+.navbar .nav > li.heart:hover, .navbar .nav > li.heart #active {
+  background: @white url("../images/CR_nav_heart_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+
+.navbar .nav > li.hands {
+  background: @white url("../images/CR_nav_hands.svg") no-repeat 8px 12px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+
+}
+.navbar .nav > li.hands:hover, .navbar .nav > li.hands#active  {
+  background: @white url("../images/CR_nav_hands_red.svg") no-repeat 8px 12px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+
+.navbar .nav > li.comment {
+  background: @white url("../images/CR_nav_comment.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+.navbar .nav > li.comment:hover, .navbar .nav > li#active {
+  background: @white url("../images/CR_nav_comment_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+
+}
+
+.navbar .nav > li#active a {
+  color: @red;
+}
+
+.navbar .nav > li.award {
+  background: @white url("../images/CR_nav_award.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+.navbar .nav > li.award:hover {
+  background: @white url("../images/CR_nav_award_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right:8px;
+}
+
+
+.navbar .nav .dropdown-toggle .caret {
+  margin-top: 8px;
+}
+
+// Hover/focus
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
+  color: @navbarLinkColorHover;
+  text-decoration: none;
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: @navbarLinkColorActive;
+  text-decoration: none;
+}
+
+// Navbar button for toggling navbar items in responsive layouts
+// These definitions need to come after '.navbar .btn'
+.navbar .btn-navbar {
+  display: none;
+  float: right;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  .buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));
+  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");
+}
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  .border-radius(1px);
+  .box-shadow(0 1px 0 rgba(0,0,0,.25));
+}
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+

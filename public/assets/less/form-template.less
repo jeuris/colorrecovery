@@ -1,0 +1,97 @@
+.content
+{
+	.formholder
+	{
+		position: relative;
+		padding-top: 1rem;
+
+		.row
+		{
+			padding:0;
+
+			.form-horizontal
+			{
+				.span5
+				{
+
+					.control-group
+					{
+						margin-bottom: 2px;
+
+						.control-label
+						{
+							background-color: @grayLight;
+							padding:4px 6px 4px 16px;
+							text-align:left;
+							line-height:30px;
+							margin:0px 2px 0px;
+							width:20%;
+						}
+
+						&:last-child
+						{
+							.control-label
+							{
+								height:100px;
+							}
+						}
+					}
+
+					.controls
+					{
+						margin-left: 50px;
+
+						input, textarea
+						{
+							background-color: @grayDark;
+							border: none;
+							border-radius: 0;
+							height:30px;
+							width:80%;
+						}
+
+						textarea
+						{
+							height:100px;
+						}
+					}
+
+					button:hover
+					{
+						background-color: red;
+						color: white;
+					}
+
+					&:last-child
+					{
+						padding:1% 0 0 2%;
+					}
+				}
+			}
+		}
+
+		.rect-btn
+		{
+			border: 0px;
+			font-family: 'proximamedium';
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			text-decoration: none;
+			color: @gray;
+		}
+
+		.message
+		{
+			strong
+			{
+				display: inline-block;
+				margin: 5px 10px 5px 5px;
+			}
+
+			p
+			{
+				display: inline-block;
+			}
+		}
+	}
+}

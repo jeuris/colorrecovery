@@ -1,0 +1,32 @@
+.content
+{
+	.breadcrumbs
+	{
+		background-color: @grayLight;
+		color: @black;
+		text-align: center;
+		padding: .75rem 0 .25rem 0;
+		
+		ul
+		{
+			list-style: none;
+			
+			li
+			{
+				display: inline-block;
+				
+				a, a:visited{ color: @white; text-decoration: none; font-weight: bold; }
+				a:hover{ color: @grayDark; cursor: pointer; }
+				
+				&:after{ content:' / '; }
+				&:last-child:after{ content: ''; }
+			}
+			
+			li.current
+			{
+				a, a:visited{ color: @grayDark; text-decoration: none; font-weight: normal; }
+				a:hover{ color: @black; cursor: pointer; }
+			}
+		}
+	}
+}

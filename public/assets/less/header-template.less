@@ -1,0 +1,109 @@
+.content
+{
+	.header
+	{
+		min-height: 200px;
+		margin-bottom: 2.5%;
+		background-position: center center;
+		background-size: cover;
+
+		.container
+		{
+			padding-top: 15%;
+			width: 50%;
+			.title-holder
+			{
+				padding: 5% 10% 5% 10%;
+				background-color: rgba(0,0,0,.7);
+				margin: 0 auto;
+
+				h1
+				{
+					line-height: 50px;
+				}
+				
+				h1, h3
+				{
+					margin: 0 auto;
+					color: white;
+					text-align: center;
+				}
+				
+				.header-body
+				{
+					text-align: center;
+					margin: 1rem auto;
+				}
+
+				.arrow-down
+				{
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+	.header-text
+	{
+		margin-top:3%;
+		border-bottom: 1px solid @grayLabel;
+		.title-holder
+		{
+			.content-holder
+			{
+				margin-left:20px;
+				
+				h1
+				{
+					font-size: 48px;
+					line-height: 50px;
+					letter-spacing: 5px;
+				}
+
+				.header-label
+				{
+					display: inline-block;
+					background-color: @grayLabel;
+					h5
+					{
+						padding: 10px 15px;
+						color: white;
+						margin:0;
+						letter-spacing: 3px;
+					}
+				}
+
+				.details
+				{
+					display: inline-block;
+					float: right;
+					margin:15px 15px 0 0;
+					color: @grayLabel;
+
+					strong
+					{
+						color: @grayDark;
+					}
+				}
+			}
+		}
+
+		.indicator
+		{
+			float:left;
+			position: absolute;
+
+			h1
+			{
+				letter-spacing: 0;
+				background-color: @grayGeneral;
+				margin-top: -28px;
+				margin-left: 25px;
+				padding: 5px;
+				font-size: 48px;
+				line-height: 50px;
+				color: @grayLabel;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.content
+{
+	.pagination-bar
+	{
+		background-color: white;
+		position: relative;
+
+		.pagination
+		{
+			position: relative;
+			padding: 1rem 1rem .8rem 1rem;
+			margin: 0;
+
+			ul
+			{
+
+			}
+
+			li
+			{
+				a
+				{
+					margin-right: 1px;
+					border: none;
+					background-color: #E6E7E8;
+					border-radius: 0;
+					color:@grayDark;
+					padding:6px 12px;
+				}
+				&.active a { color: @steinerRed; }
+			}
+		}
+
+		.square-btn
+		{
+			
+		}
+
+		.left
+		{
+			position: absolute;
+			left:18px;
+			top:28%;
+		}
+
+		.right
+		{
+			position: absolute;
+			right:18px;
+			top:28%;
+		}
+	}
+}

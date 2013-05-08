@@ -1,0 +1,3 @@
+<div class="message 404">
+	These aren't the templates you're looking for...
+</div>
