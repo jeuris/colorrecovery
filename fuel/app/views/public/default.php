@@ -5,21 +5,28 @@
 	<title><?php echo $page_title; ?></title>
 	<meta name="author" content="maximumawesome.nl" />
 	<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
-	<link rel="stylesheet" href="/assets/css/style.css" />
+	<link rel="stylesheet" href="/assets/css/style_temp.css" />
 </head>
 <body class="front">
-	<div class="menu affix-top" style="position:fixed; top:0; z-index:10">
-		<nav class="container">
-			<ul>
-				<?php
-				foreach( $menu as $item )
-				{
-					echo '<li><a href="'.$item->slug.'">'.$item->title.'</a></li>';
-				}
-				?>
-
-			</ul>
-		</nav>
+<div class="colorbackground">
+	<header>
+		<div class="masthead">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul class="nav">
+							<li class="home"><a href="#"></a></li>
+							<?php
+							foreach( $menu as $item )
+							{
+								echo '<li><a href="'.$item->slug.'">'.$item->title.'</a></li>';
+							}
+							?>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="content">
 <?php echo $content; ?>
