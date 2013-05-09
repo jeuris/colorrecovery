@@ -17,7 +17,7 @@
 			echo "\n\t\t";
 			echo '<div class="text-side">';
 			echo "\n\t\t\t";
-			echo '<h1>'.@$part['data']['header-head'].'</h1>';
+			echo '<h1>'. str_replace(' ', '<br/>', @$part['data']['header-head'] ).'</h1>';
 			echo "\n\t\t";
 			echo '</div>';
 			echo "\n";

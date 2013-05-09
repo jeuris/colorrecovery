@@ -1,4 +1,4 @@
-<div class="listview container template-itemholder paginate" data-pagesize="<?php echo @$json['pagination']; ?>">
+<div class="listview container template-itemholder">
 	<?php
 	if( isset($json['header-label']) )
 	{
