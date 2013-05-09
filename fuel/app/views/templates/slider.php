@@ -1,5 +1,5 @@
 <div class="hidden" data-editable="select" data-select="all|1" data-value="<?php echo @$json['pagination']; ?>" data-key="pagination" data-description="Items per pagina" style="display:none;"></div>
-<div class="listview container template-itemholder paginate" data-pagesize="<?php echo @$json['pagination']; ?>">
+<div class="slider container template-itemholder paginate" data-pagesize="<?php echo @$json['pagination']; ?>">
 	<?php
 	$items			= (array)$json['items'];
 	$filelocations	= Config::get('app.app_config.filepath');
