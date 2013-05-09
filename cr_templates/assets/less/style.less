@@ -54,81 +54,159 @@
 // From 979px and below, show a button to toggle navbar contents
 @import "responsive-navbar.less";
 
-// KLUDGES - dit samenvoegen
+// KLUDGES - later samenvoegen
 // ------------------
-.details {
-	background-color: #ccc;
-}
-
-body {
-	background: transparent;
-}
 
 .front {
-	background: transparent;
-}
 
-.container {
-	background: transparent;
-}
-
-.main {
-	padding-top: 120px;
-}
-
-.header {
-	h1{
-		color: @white;
-		text-transform: none;
-		font-weight: normal;
-		text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-		width: 600px;
+	.details {
+		background-color: #ccc;
 	}
-	h2{
-		color: @white;
-		text-transform: none;
-		font-weight: normal;
-		margin-top:1.5em;
-		line-height: 110%;
-		letter-spacing: .1em;
-		font-family: 'proxima_novalight';
-		text-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
-		width: 650px;
+
+	body {
+		background: transparent;
 	}
-}
 
-.listview {
-	height: 900px;
-}
+	.front {
+		// background: transparent;
+	}
 
-.paginate
-{
-	overflow: hidden;
-	height: 85%;
-	top: 0px;
-	white-space: nowrap;
-	margin-top: 64px;
+	.container {
+		background: transparent;
+	}
 
-	.pages
-	{
-		position: relative;
-		.page
-		{
-			display: inline-block;
-			vertical-align:top;
-			width: 100%;
-			max-width: 100%;
-			padding:40px 0;
-
-			& > * { white-space: pre-wrap; }
+	.nav {
+		li {
+			padding-left: 12px;
+		}
+		li.home {
+			padding-left: 0px;
+		}
+		li:nth-child(2){
+			.heart;
+			&:hover, &#active {
+				.heart_active;
+			}
+		}
+		li:nth-child(3){
+			.award;
+			&:hover, &#active {
+				.award_active;
+			}
+		}
+		li:nth-child(4){
+			.hands;
+			&:hover, &#active {
+				.hands_active;
+			}
+		}
+		li:nth-child(5){
+			.comment;
+			&:hover, &#active {
+				.comment_active;
+			}
 		}
 	}
-}
 
-.pagination-bar
-{
-	margin: 0;
-	li{ float: left; list-style: none; margin: 0; padding: 0; }
-}
+	.main {
+		padding-top: 120px;
+	}
 
-ul { margin: 0; }
+	.header {
+		h1{
+			color: @white;
+			text-transform: none;
+			font-weight: normal;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+			width: 600px;
+		}
+		h2{
+			color: @white;
+			text-transform: none;
+			font-weight: normal;
+			margin-top:1.5em;
+			line-height: 110%;
+			letter-spacing: .1em;
+			font-family: 'proxima_novalight';
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+			width: 650px;
+		}
+	}
+
+	.template-item {
+		.comment-icon {
+
+		}
+	}
+
+	.text-side {
+		width: 30%;
+		position: fixed;
+		bottom: 0px;
+		right: 68%;
+		text-align: right;
+		h1{ color: @white; }
+	}
+
+	.listview {
+		background: rgba(255,255,255,.8);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		min-height: 100%;
+		width: 66%;
+		padding: 130px 0 0 0;
+
+		&.container{ margin: 0;}
+
+		.header-label {
+			display: inline-block;
+			h1{
+				color: @grayDark;
+				margin-left: 112px;
+				word-wrap: break-word;
+			}
+		}
+
+		p {
+			display: inline-block;
+			padding: 8px 0 0 0;
+		}
+
+		hr {
+			border-bottom: 1px dashed @grayLight;
+		}
+	}
+
+	.paginate
+	{
+		overflow: hidden;
+		//height: 85%;
+		top: 0px;
+		white-space: nowrap;
+		margin-top: 64px;
+
+		.pages
+		{
+			position: relative;
+			.page
+			{
+				display: inline-block;
+				vertical-align:top;
+				width: 100%;
+				max-width: 100%;
+				padding:40px 0;
+
+				& > * { white-space: pre-wrap; }
+			}
+		}
+	}
+
+	.pagination-bar
+	{
+		margin: 0;
+		li{ float: left; list-style: none; margin: 0; padding: 0; }
+	}
+
+	ul { margin: 0; }
+}

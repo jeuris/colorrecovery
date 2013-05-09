@@ -138,148 +138,150 @@ hr.dashedline:after {
 // Forms
 // --------------------------------------------------
 
+.front
+{
+	// GENERAL STYLES
+	// --------------
 
-// GENERAL STYLES
-// --------------
-
-// Make all forms have space below them
-form {
-  margin: 0 0 @baseLineHeight;
-}
-
-
-// Set font for forms
-label,
-input,
-button,
-select,
-textarea {
-  #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
-}
-input,
-button,
-select,
-textarea {
-  font-family: 'proxima_novaregular_italic'; // And only set font-family here for those that need it (note the missing label element)
-}
-
-// Identify controls by their labels
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-// Form controls
-// -------------------------
-
-// Shared size and type resets
-select,
-textarea,
-input[type="text"],
-input[type="email"],
-.uneditable-input {
-  display: inline-block;
-  height: @baseLineHeight;
-  padding: 21px 16px;
-  margin-bottom: @baseLineHeight / 5;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
-  border:none;
-  color: @gray;
-  vertical-align: middle;
-}
-
-// Reset appearance properties for textual inputs and textarea
-// Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
-input,
-textarea{
-  width: 206px; // plus 12px padding and 2px border
-}
-// Reset height since textareas have rows
-textarea {
-  height: auto;
-}
-// Everything else
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-.uneditable-input {
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-  .transition(~"border linear .2s, box-shadow linear .2s");
-
-// Focus state
-  &:focus {
-    border-color: rgba(0,0,0,.2);
-    outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2)");
-  }
-}
+	// Make all forms have space below them
+	form {
+	  margin: 0 0 @baseLineHeight;
+	}
 
 
-// Reset width of input images, buttons, radios, checkboxes
-input[type="submit"],
-input[type="button"],
- {
-  width: auto; // Override of generic input selector
-}
+	// Set font for forms
+	label,
+	input,
+	button,
+	select,
+	textarea {
+	  #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+	}
+	input,
+	button,
+	select,
+	textarea {
+	  font-family: 'proxima_novaregular_italic'; // And only set font-family here for those that need it (note the missing label element)
+	}
 
-// Set the height of select and file controls to match text inputs
-select {
-  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-}
+	// Identify controls by their labels
+	label {
+	  display: block;
+	  margin-bottom: 5px;
+	}
 
-// Make select elements obey height by applying a border
-select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
-  border: 1px solid @white;
-  background-color: @white; // Chrome on Linux and Mobile Safari need background-color
-}
+	// Form controls
+	// -------------------------
 
-// Make multiple select elements height not fixed
-select[multiple],
-select[size] {
-  height: auto;
-}
+	// Shared size and type resets
+	select,
+	textarea,
+	input[type="text"],
+	input[type="email"],
+	.uneditable-input {
+	  display: inline-block;
+	  height: @baseLineHeight;
+	  padding: 21px 16px;
+	  margin-bottom: @baseLineHeight / 5;
+	  font-size: @baseFontSize;
+	  line-height: @baseLineHeight;
+	  border:none;
+	  color: @gray;
+	  vertical-align: middle;
+	}
 
-// Focus for select, file, radio, and checkbox
-select:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  .tab-focus();
-}
+	// Reset appearance properties for textual inputs and textarea
+	// Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
+	input,
+	textarea{
+	  width: 206px; // plus 12px padding and 2px border
+	}
+	// Reset height since textareas have rows
+	textarea {
+	  height: auto;
+	}
+	// Everything else
+	textarea,
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	.uneditable-input {
+	  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+	  .transition(~"border linear .2s, box-shadow linear .2s");
+
+	// Focus state
+	  &:focus {
+		border-color: rgba(0,0,0,.2);
+		outline: 0;
+		outline: thin dotted \9; /* IE6-9 */
+		.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2)");
+	  }
+	}
 
 
-// Placeholder
-// -------------------------
+	// Reset width of input images, buttons, radios, checkboxes
+	input[type="submit"],
+	input[type="button"],
+	 {
+	  width: auto; // Override of generic input selector
+	}
 
-// Placeholder text gets special styles because when browsers invalidate entire lines if it doesn't understand a selector
-input,
-textarea {
-  .placeholder();
-}
+	// Set the height of select and file controls to match text inputs
+	select {
+	  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
+	}
 
-button { text-align: center;}
+	// Make select elements obey height by applying a border
+	select {
+	  width: 220px; // default input width + 10px of padding that doesn't get applied
+	  border: 1px solid @white;
+	  background-color: @white; // Chrome on Linux and Mobile Safari need background-color
+	}
 
-.sendbutton {
-  margin-top:20px;
-  width: 100%;
-  margin-bottom: 20px;
-  padding-top:5px;
-  text-align: center;
-  color: @white;
-  background-color: transparent;
-  border:none;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-  text-transform: uppercase;
-  font-family: 'proxima_novasemibold';
-  font-size: 32px;
-  }
+	// Make multiple select elements height not fixed
+	select[multiple],
+	select[size] {
+	  height: auto;
+	}
 
-.sendbutton:hover{
-  color: @gray;
+	// Focus for select, file, radio, and checkbox
+	select:focus,
+	input[type="file"]:focus,
+	input[type="radio"]:focus,
+	input[type="checkbox"]:focus {
+	  .tab-focus();
+	}
+
+
+	// Placeholder
+	// -------------------------
+
+	// Placeholder text gets special styles because when browsers invalidate entire lines if it doesn't understand a selector
+	input,
+	textarea {
+	  .placeholder();
+	}
+
+	button { text-align: center;}
+
+	.sendbutton {
+	  margin-top:20px;
+	  width: 100%;
+	  margin-bottom: 20px;
+	  padding-top:5px;
+	  text-align: center;
+	  color: @white;
+	  background-color: transparent;
+	  border:none;
+	  text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+	  text-transform: uppercase;
+	  font-family: 'proxima_novasemibold';
+	  font-size: 32px;
+	  }
+
+	.sendbutton:hover{
+	  color: @gray;
+	}
 }
 // Global values
 // --------------------------------------------------

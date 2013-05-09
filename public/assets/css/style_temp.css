@@ -129,33 +129,33 @@ hr.dashedline:after {
   font-family: 'proxima_novaregular_italic';
   font-size: 12px;
 }
-form {
+.front form {
   margin: 0 0 20px;
 }
-label,
-input,
-button,
-select,
-textarea {
+.front label,
+.front input,
+.front button,
+.front select,
+.front textarea {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
 }
-input,
-button,
-select,
-textarea {
+.front input,
+.front button,
+.front select,
+.front textarea {
   font-family: 'proxima_novaregular_italic';
 }
-label {
+.front label {
   display: block;
   margin-bottom: 5px;
 }
-select,
-textarea,
-input[type="text"],
-input[type="email"],
-.uneditable-input {
+.front select,
+.front textarea,
+.front input[type="text"],
+.front input[type="email"],
+.front .uneditable-input {
   display: inline-block;
   height: 20px;
   padding: 21px 16px;
@@ -166,18 +166,18 @@ input[type="email"],
   color: #555555;
   vertical-align: middle;
 }
-input,
-textarea {
+.front input,
+.front textarea {
   width: 206px;
 }
-textarea {
+.front textarea {
   height: auto;
 }
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-.uneditable-input {
+.front textarea,
+.front input[type="text"],
+.front input[type="email"],
+.front input[type="tel"],
+.front .uneditable-input {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -186,11 +186,11 @@ input[type="tel"],
   -o-transition: border linear .2s, box-shadow linear .2s;
   transition: border linear .2s, box-shadow linear .2s;
 }
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-.uneditable-input:focus {
+.front textarea:focus,
+.front input[type="text"]:focus,
+.front input[type="email"]:focus,
+.front input[type="tel"]:focus,
+.front .uneditable-input:focus {
   border-color: rgba(0, 0, 0, 0.2);
   outline: 0;
   outline: thin dotted \9;
@@ -200,48 +200,48 @@ input[type="tel"]:focus,
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2);
 }
-input[type="submit"],
-input[type="button"] {
+.front input[type="submit"],
+.front input[type="button"] {
   width: auto;
 }
-select {
+.front select {
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
 
 }
-select {
+.front select {
   width: 220px;
   border: 1px solid #ffffff;
   background-color: #ffffff;
 }
-select[multiple],
-select[size] {
+.front select[multiple],
+.front select[size] {
   height: auto;
 }
-select:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+.front select:focus,
+.front input[type="file"]:focus,
+.front input[type="radio"]:focus,
+.front input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-input:-moz-placeholder,
-textarea:-moz-placeholder {
+.front input:-moz-placeholder,
+.front textarea:-moz-placeholder {
   color: #999999;
 }
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+.front input:-ms-input-placeholder,
+.front textarea:-ms-input-placeholder {
   color: #999999;
 }
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+.front input::-webkit-input-placeholder,
+.front textarea::-webkit-input-placeholder {
   color: #999999;
 }
-button {
+.front button {
   text-align: center;
 }
-.sendbutton {
+.front .sendbutton {
   margin-top: 20px;
   width: 100%;
   margin-bottom: 20px;
@@ -255,7 +255,7 @@ button {
   font-family: 'proxima_novasemibold';
   font-size: 32px;
 }
-.sendbutton:hover {
+.front .sendbutton:hover {
   color: #555555;
 }
 @font-face {
@@ -1222,40 +1222,37 @@ address {
   padding-left: 20px;
   text-shadow: 0 1px 0 #ffffff;
 }
-.navbar .nav > li.heart {
+.heart {
   background: #ffffff url("../images/CR_nav_heart.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.heart:hover,
-.navbar .nav > li.heart #active {
+.heart_active {
   background: #ffffff url("../images/CR_nav_heart_red.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.hands {
+.hands {
   background: #ffffff url("../images/CR_nav_hands.svg") no-repeat 8px 12px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.hands:hover,
-.navbar .nav > li.hands#active {
+.hands_active {
   background: #ffffff url("../images/CR_nav_hands_red.svg") no-repeat 8px 12px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.comment {
+.comment {
   background: #ffffff url("../images/CR_nav_comment.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.comment:hover,
-.navbar .nav > li#active {
+.comment_active {
   background: #ffffff url("../images/CR_nav_comment_red.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
@@ -1264,13 +1261,13 @@ address {
 .navbar .nav > li#active a {
   color: #be1e2d;
 }
-.navbar .nav > li.award {
+.award {
   background: #ffffff url("../images/CR_nav_award.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
   padding-right: 8px;
 }
-.navbar .nav > li.award:hover {
+.award_active {
   background: #ffffff url("../images/CR_nav_award_red.svg") no-repeat 8px 13px;
   background-size: 20px 20px;
   padding-left: 16px;
@@ -1477,33 +1474,33 @@ hr.dashedline:after {
   font-family: 'proxima_novaregular_italic';
   font-size: 12px;
 }
-form {
+.front form {
   margin: 0 0 20px;
 }
-label,
-input,
-button,
-select,
-textarea {
+.front label,
+.front input,
+.front button,
+.front select,
+.front textarea {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
 }
-input,
-button,
-select,
-textarea {
+.front input,
+.front button,
+.front select,
+.front textarea {
   font-family: 'proxima_novaregular_italic';
 }
-label {
+.front label {
   display: block;
   margin-bottom: 5px;
 }
-select,
-textarea,
-input[type="text"],
-input[type="email"],
-.uneditable-input {
+.front select,
+.front textarea,
+.front input[type="text"],
+.front input[type="email"],
+.front .uneditable-input {
   display: inline-block;
   height: 20px;
   padding: 21px 16px;
@@ -1514,18 +1511,18 @@ input[type="email"],
   color: #555555;
   vertical-align: middle;
 }
-input,
-textarea {
+.front input,
+.front textarea {
   width: 206px;
 }
-textarea {
+.front textarea {
   height: auto;
 }
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-.uneditable-input {
+.front textarea,
+.front input[type="text"],
+.front input[type="email"],
+.front input[type="tel"],
+.front .uneditable-input {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1534,11 +1531,11 @@ input[type="tel"],
   -o-transition: border linear .2s, box-shadow linear .2s;
   transition: border linear .2s, box-shadow linear .2s;
 }
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-.uneditable-input:focus {
+.front textarea:focus,
+.front input[type="text"]:focus,
+.front input[type="email"]:focus,
+.front input[type="tel"]:focus,
+.front .uneditable-input:focus {
   border-color: rgba(0, 0, 0, 0.2);
   outline: 0;
   outline: thin dotted \9;
@@ -1548,48 +1545,48 @@ input[type="tel"]:focus,
   -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.2);
 }
-input[type="submit"],
-input[type="button"] {
+.front input[type="submit"],
+.front input[type="button"] {
   width: auto;
 }
-select {
+.front select {
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
 
 }
-select {
+.front select {
   width: 220px;
   border: 1px solid #ffffff;
   background-color: #ffffff;
 }
-select[multiple],
-select[size] {
+.front select[multiple],
+.front select[size] {
   height: auto;
 }
-select:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
+.front select:focus,
+.front input[type="file"]:focus,
+.front input[type="radio"]:focus,
+.front input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-input:-moz-placeholder,
-textarea:-moz-placeholder {
+.front input:-moz-placeholder,
+.front textarea:-moz-placeholder {
   color: #999999;
 }
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+.front input:-ms-input-placeholder,
+.front textarea:-ms-input-placeholder {
   color: #999999;
 }
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+.front input::-webkit-input-placeholder,
+.front textarea::-webkit-input-placeholder {
   color: #999999;
 }
-button {
+.front button {
   text-align: center;
 }
-.sendbutton {
+.front .sendbutton {
   margin-top: 20px;
   width: 100%;
   margin-bottom: 20px;
@@ -1603,7 +1600,7 @@ button {
   font-family: 'proxima_novasemibold';
   font-size: 32px;
 }
-.sendbutton:hover {
+.front .sendbutton:hover {
   color: #555555;
 }
 @font-face {
@@ -2716,29 +2713,84 @@ button {
     overflow: visible !important;
   }
 }
-.details {
+.front .details {
   background-color: #ccc;
 }
-body {
+.front body {
   background: transparent;
 }
-.front {
+.front .container {
   background: transparent;
 }
-.container {
-  background: transparent;
+.front .nav li {
+  padding-left: 12px;
 }
-.main {
+.front .nav li.home {
+  padding-left: 0px;
+}
+.front .nav li:nth-child(2) {
+  background: #ffffff url("../images/CR_nav_heart.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(2):hover,
+.front .nav li:nth-child(2)#active {
+  background: #ffffff url("../images/CR_nav_heart_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(3) {
+  background: #ffffff url("../images/CR_nav_award.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(3):hover,
+.front .nav li:nth-child(3)#active {
+  background: #ffffff url("../images/CR_nav_award_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(4) {
+  background: #ffffff url("../images/CR_nav_hands.svg") no-repeat 8px 12px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(4):hover,
+.front .nav li:nth-child(4)#active {
+  background: #ffffff url("../images/CR_nav_hands_red.svg") no-repeat 8px 12px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(5) {
+  background: #ffffff url("../images/CR_nav_comment.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .nav li:nth-child(5):hover,
+.front .nav li:nth-child(5)#active {
+  background: #ffffff url("../images/CR_nav_comment_red.svg") no-repeat 8px 13px;
+  background-size: 20px 20px;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+.front .main {
   padding-top: 120px;
 }
-.header h1 {
+.front .header h1 {
   color: #ffffff;
   text-transform: none;
   font-weight: normal;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   width: 600px;
 }
-.header h2 {
+.front .header h2 {
   color: #ffffff;
   text-transform: none;
   font-weight: normal;
@@ -2749,38 +2801,71 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   width: 650px;
 }
-.listview {
-  height: 900px;
+.front .text-side {
+  width: 30%;
+  position: fixed;
+  bottom: 0px;
+  right: 68%;
+  text-align: right;
 }
-.paginate {
+.front .text-side h1 {
+  color: #ffffff;
+}
+.front .listview {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-height: 100%;
+  width: 66%;
+  padding: 130px 0 0 0;
+}
+.front .listview.container {
+  margin: 0;
+}
+.front .listview .header-label {
+  display: inline-block;
+}
+.front .listview .header-label h1 {
+  color: #3c3c3b;
+  margin-left: 112px;
+  word-wrap: break-word;
+}
+.front .listview p {
+  display: inline-block;
+  padding: 8px 0 0 0;
+}
+.front .listview hr {
+  border-bottom: 1px dashed #999999;
+}
+.front .paginate {
   overflow: hidden;
-  height: 85%;
   top: 0px;
   white-space: nowrap;
   margin-top: 64px;
 }
-.paginate .pages {
+.front .paginate .pages {
   position: relative;
 }
-.paginate .pages .page {
+.front .paginate .pages .page {
   display: inline-block;
   vertical-align: top;
   width: 100%;
   max-width: 100%;
   padding: 40px 0;
 }
-.paginate .pages .page > * {
+.front .paginate .pages .page > * {
   white-space: pre-wrap;
 }
-.pagination-bar {
+.front .pagination-bar {
   margin: 0;
 }
-.pagination-bar li {
+.front .pagination-bar li {
   float: left;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-ul {
+.front ul {
   margin: 0;
 }

@@ -123,7 +123,7 @@ return array(
 			'item' 					=> 3,
 		),
 
-		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>'),
+		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>','<hr>'),
 		'allowed_html_attributes'	=> array('href','src','alt', 'style', 'class','type','for','placeholder','value','name','data-pagesize','data-url','id'),
 
 		'templates'	=> array(
@@ -175,7 +175,7 @@ return array(
 			'list' => array(
 				'title'				=> 'Lijst',
 				'view'				=> 'templates/list',
-				'has_header'		=> false,
+				'has_header'		=> true,
 				'default_metadata'	=> array(
 					'pagination' => 1,
 					'items' => array(
@@ -184,7 +184,7 @@ return array(
 							'typeSlug'  => '',
 							'image_id'	=> '-1',
 							'image_url'	=> 'http://',
-							'title'		=> 'Titel',
+							// 'title'		=> 'Titel',
 							'body'		=> 'Tekst',
 							'url'		=> 'http://',
 						)

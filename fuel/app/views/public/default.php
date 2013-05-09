@@ -7,8 +7,8 @@
 	<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
 	<link rel="stylesheet" href="/assets/css/style_temp.css" />
 </head>
-<body class="front">
-<div class="content colorbackground">
+<body class="front colorbackground">
+<div class="content">
 	<header>
 		<div class="masthead">
 			<div class="navbar">
@@ -17,9 +17,19 @@
 						<ul class="nav">
 							<li class="home"><a href="/"></a></li>
 							<?php
+							$current = Uri::segment(count(Uri::segments())); // last segment
 							foreach( $menu as $item )
 							{
-								echo '<li><a href="'.$item->slug.'">'.$item->title.'</a></li>';
+								$active = '';
+								if($current === $item->slug)
+								{
+									$active = ' id="active"';
+								}
+								echo '<li'.$active.'>';
+								echo '<a href="'.$item->slug.'">';
+								echo $item->title;
+								echo '</a>';
+								'</li>';
 							}
 							?>
 						</ul>
