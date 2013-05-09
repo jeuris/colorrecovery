@@ -127,6 +127,8 @@ return array(
 		'allowed_html_attributes'	=> array('href','src','alt', 'style', 'class','type','for','placeholder','value','name','data-pagesize','data-url','id'),
 
 		'templates'	=> array(
+
+			/*
 			'header' => array(
 				'title'				=> 'Header',
 				'view'				=> 'templates/header',
@@ -149,10 +151,11 @@ return array(
 					),
 				),
 			),
+			*/
 			'video' => array(
 				'title'				=> 'Video',
 				'view'				=> 'templates/video',
-				'has_header'		=> true,
+				'has_header'		=> false,
 				'default_metadata'	=> array(
 					'image_id'		=> '-1',
 					'image_url'		=> 'http://',
@@ -172,9 +175,9 @@ return array(
 			'list' => array(
 				'title'				=> 'Lijst',
 				'view'				=> 'templates/list',
-				'has_header'		=> true,
+				'has_header'		=> false,
 				'default_metadata'	=> array(
-                    'pagination' => 5,
+                    'pagination' => 1,
                     'items' => array(
 						array(
 							'slug'		=> '',
@@ -189,19 +192,19 @@ return array(
 				),
 				'images' => array(
 					'full'	=> array(
-						'width'  => '303',
-						'height' => '228',
+						'width'  => '1280',
+						'height' => '1024',
 					),
 					'thumb' => array(
-						'width'  => '303',
-						'height' => '228',
+						'width'  => '800',
+						'height' => '600',
 					),
 				),
-			),
+			),/*
             'grid' => array(
                 'title'				=> 'Grid',
                 'view'				=> 'templates/grid',
-				'has_header'		=> true,
+				'has_header'		=> false,
                 'pagination'        => 5,
                 'default_metadata'	=> array(
                     'items' => array(
@@ -241,7 +244,7 @@ return array(
             'gallery' => array(
                 'title'				=> 'Gallery',
                 'view'				=> 'templates/gallery',
-				'has_header'		=> true,
+				'has_header'		=> false,
                 'pagination'        => 5,
                 'default_metadata'	=> array(
                     'items' => array(
@@ -266,10 +269,11 @@ return array(
                     ),
                 ),
             ),
+*/
             'form' => array(
 				'title'				=> 'Formulier',
 				'view'				=> 'templates/form',
-				'has_header'		=> true,
+				'has_header'		=> false,
 				'default_metadata'	=> array(
 					'label1'	=> 'E-mail',
 					'label2'	=> 'Naam',
@@ -280,6 +284,7 @@ return array(
 				),
 				'images' => array(),
 			),
+
 /*
 			'contentpage' => array(
 				'title'				=> 'Content pagina',
@@ -305,6 +310,20 @@ return array(
 				'images' => array(),
 			),
 */
+
+			'header' => array(
+				'title'				=> 'Header',
+				'view'				=> 'templates/header',
+				'has_header'		=> false,
+				'default_metadata'	=> array(
+					'headerText'	=> 'Hoofd',
+					'subText'		=> 'Sub',
+					'items'			=> array(),
+				),
+				'images' => array(
+				),
+			),
+
 			'header-text' => array(
 				'title'				=> 'Tekst header',
 				'view'				=> 'templates/header-text',
@@ -317,183 +336,184 @@ return array(
 				),
 				'images' => array(),
 			),
-			'list-detail' => array(
-				'title'				=> 'Lijst detail',
-				'view'				=> 'templates/list-detail',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'image_id'		=> '-1',
-					'image_url'		=> 'http://',
-					'body'			=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-					'items' => array(),
-				),
-				'images' => array(),
-			),
-			'news' => array(
-				'title'				=> 'Nieuws',
-				'view'				=> 'templates/news',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'source'		=> 'steiner.nl',
-					'items' => array(
-						array(
-							'image_id'	=> '-1',
-							'image_url'	=> 'http://',
-							'title'		=> 'Titel',
-							'body'		=> 'Tekst',
-							'url'		=> 'http://',
-						)
-					),
-				),
-				'images' => array(
-					'full'	=> array(
-						'width'  => '600',
-						'height' => '300',
-					),
-					'thumb' => array(
-						'width'  => '303',
-						'height' => '228',
-					),
-				),
-			),
-/*
-			'pagination' => array(
-				'title'				=> 'Pagina nummers',
-				'view'				=> 'templates/pagination',
-				'default_metadata'	=> array(
-					'items' => array(),
-				),
-				'images' => array(),
-			),
-*/
-			'product-detail' => array(
-				'title'				=> 'Product detail',
-				'view'				=> 'templates/product-detail',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'description'	=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, lacus in sodales semper, nisl enim rutrum nulla, eget volutpat arcu massa in erat. Maecenas lacus dui, venenatis a lacinia at, sodales at mauris.',
-					'case'			=> '',
-					'strap'			=> '',
-					'dial'			=> '',
-					'jewels'		=> '',
-					'extra'			=> 'Extra information',
-					'extra_text'	=> '',
-					'main_image'	=> 'product-big.png',
-					'items' => array(
-						array(
-							'image_id'	=> -1,
-							'image_url'	=> '',
+			/*
+						'list-detail' => array(
+							'title'				=> 'Lijst detail',
+							'view'				=> 'templates/list-detail',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'image_id'		=> '-1',
+								'image_url'		=> 'http://',
+								'body'			=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+								'items' => array(),
+							),
+							'images' => array(),
 						),
-						array(
-							'image_id'	=> -1,
-							'image_url'	=> '',
+						'news' => array(
+							'title'				=> 'Nieuws',
+							'view'				=> 'templates/news',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'source'		=> 'steiner.nl',
+								'items' => array(
+									array(
+										'image_id'	=> '-1',
+										'image_url'	=> 'http://',
+										'title'		=> 'Titel',
+										'body'		=> 'Tekst',
+										'url'		=> 'http://',
+									)
+								),
+							),
+							'images' => array(
+								'full'	=> array(
+									'width'  => '600',
+									'height' => '300',
+								),
+								'thumb' => array(
+									'width'  => '303',
+									'height' => '228',
+								),
+							),
 						),
-						array(
-							'image_id'	=> -1,
-							'image_url'	=> '',
+			/*
+						'pagination' => array(
+							'title'				=> 'Pagina nummers',
+							'view'				=> 'templates/pagination',
+							'default_metadata'	=> array(
+								'items' => array(),
+							),
+							'images' => array(),
 						),
-					),
-				),
-				'images' => array(
-					'full'	=> array(
-						'width'  => '333',
-						'height' => '500',
-					),
-					'thumb' => array(
-						'width'  => '73',
-						'height' => '73',
-					),
-				),
-			),
-			'text' => array(
-				'title'				=> 'Tekst',
-				'view'				=> 'templates/text',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'header'	=> 'Kop',
-					'text'		=> 'Tekst',
-					'slug'		=> '',
-					'typeSlug'	=> '',
-				),
-				'images' => array(),
-			),
-			'text-columns' => array(
-				'title'				=> 'Tekst met kolommen',
-				'view'				=> 'templates/text-columns',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'items' 	=> array(
-						array(
-							'header'	=> 'Kop 1',
-							'text'		=> 'Tekst kolom 1',
-							'slug'		=> '',
-							'typeSlug'	=> '',
+
+						'product-detail' => array(
+							'title'				=> 'Product detail',
+							'view'				=> 'templates/product-detail',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'description'	=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, lacus in sodales semper, nisl enim rutrum nulla, eget volutpat arcu massa in erat. Maecenas lacus dui, venenatis a lacinia at, sodales at mauris.',
+								'case'			=> '',
+								'strap'			=> '',
+								'dial'			=> '',
+								'jewels'		=> '',
+								'extra'			=> 'Extra information',
+								'extra_text'	=> '',
+								'main_image'	=> 'product-big.png',
+								'items' => array(
+									array(
+										'image_id'	=> -1,
+										'image_url'	=> '',
+									),
+									array(
+										'image_id'	=> -1,
+										'image_url'	=> '',
+									),
+									array(
+										'image_id'	=> -1,
+										'image_url'	=> '',
+									),
+								),
+							),
+							'images' => array(
+								'full'	=> array(
+									'width'  => '333',
+									'height' => '500',
+								),
+								'thumb' => array(
+									'width'  => '73',
+									'height' => '73',
+								),
+							),
 						),
-						array(
-							'header'	=> 'Kop 2',
-							'text'		=> 'Tekst kolom 2',
-							'slug'		=> '',
-							'typeSlug'	=> '',
+						'text' => array(
+							'title'				=> 'Tekst',
+							'view'				=> 'templates/text',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'header'	=> 'Kop',
+								'text'		=> 'Tekst',
+								'slug'		=> '',
+								'typeSlug'	=> '',
+							),
+							'images' => array(),
 						),
-					),
-				),
-				'images' => array(),
-			),
-			'collection-holder' => array(
-				'title'				=> 'Collection Holder',
-				'view'				=> 'templates/collection-holder',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'collection'	=> 'Nieuwe collectie',
-					'items' 		=> array(
-						array(
-							'id'			=> -1,
-							'image_id'		=> -1,
-							'image_url'		=> '',
-							'title'			=> 'Collectie',
-							'text'			=> 'Omschrijving',
-							'slug'			=> '',
+						'text-columns' => array(
+							'title'				=> 'Tekst met kolommen',
+							'view'				=> 'templates/text-columns',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'items' 	=> array(
+									array(
+										'header'	=> 'Kop 1',
+										'text'		=> 'Tekst kolom 1',
+										'slug'		=> '',
+										'typeSlug'	=> '',
+									),
+									array(
+										'header'	=> 'Kop 2',
+										'text'		=> 'Tekst kolom 2',
+										'slug'		=> '',
+										'typeSlug'	=> '',
+									),
+								),
+							),
+							'images' => array(),
 						),
-					),
-				),
-				'images' => array(
-					'full'	=> array(
-						'width'  => '1200',
-						'height' => '800',
-					),
-					'thumb' => array(
-						'width'  => '600',
-						'height' => '400',
-					),
-				),
-			),
-			'product-holder' => array(
-				'title'				=> 'Product Holder',
-				'view'				=> 'templates/product-holder',
-				'has_header'		=> true,
-				'default_metadata'	=> array(
-					'items' 	=> array(
-						array(
-							'id'		=> -1,
-							'image_id'	=> -1,
-							'image_url'	=> '',
-							'title'		=> 'Product',
-							'text'		=> 'Omschrijving',
-							'slug'		=> '',
+						'collection-holder' => array(
+							'title'				=> 'Collection Holder',
+							'view'				=> 'templates/collection-holder',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'collection'	=> 'Nieuwe collectie',
+								'items' 		=> array(
+									array(
+										'id'			=> -1,
+										'image_id'		=> -1,
+										'image_url'		=> '',
+										'title'			=> 'Collectie',
+										'text'			=> 'Omschrijving',
+										'slug'			=> '',
+									),
+								),
+							),
+							'images' => array(
+								'full'	=> array(
+									'width'  => '1200',
+									'height' => '800',
+								),
+								'thumb' => array(
+									'width'  => '600',
+									'height' => '400',
+								),
+							),
 						),
-					),
-				),
-				'images' => array(
-					'full'	=> array(
-						'width'  => '1200',
-						'height' => '800',
-					),
-					'thumb' => array(
-						'width'  => '600',
-						'height' => '400',
-					),
-				),
-			),
+						'product-holder' => array(
+							'title'				=> 'Product Holder',
+							'view'				=> 'templates/product-holder',
+							'has_header'		=> false,
+							'default_metadata'	=> array(
+								'items' 	=> array(
+									array(
+										'id'		=> -1,
+										'image_id'	=> -1,
+										'image_url'	=> '',
+										'title'		=> 'Product',
+										'text'		=> 'Omschrijving',
+										'slug'		=> '',
+									),
+								),
+							),
+							'images' => array(
+								'full'	=> array(
+									'width'  => '1200',
+									'height' => '800',
+								),
+								'thumb' => array(
+									'width'  => '600',
+									'height' => '400',
+								),
+							),
+						),*/
 		),
 	),
 );

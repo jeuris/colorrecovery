@@ -1,4 +1,4 @@
-<div class="hidden" data-editable="select" data-select="all|3|6|9" data-value="<?php echo @$json['pagination']; ?>" data-key="pagination" data-description="Items per pagina" style="display:none;"></div>
+<div class="hidden" data-editable="select" data-select="1|0" data-value="<?php echo @$json['pagination']; ?>" data-key="pagination" data-description="Items per pagina" style="display:none;"></div>
 <div class="listview container template-itemholder paginate" data-pagesize="<?php echo @$json['pagination']; ?>">
 	<?php
 	$items			= (array)$json['items'];
@@ -39,7 +39,7 @@
 		echo '<p data-editable="true" data-key="body">'. @$item['body'] .'</p>';
 
 		$link = '';
-		if(strlen(@$item['slug'])>0) // todo: naar een helper class (Helper::generate_link($type,$link);
+		if(strlen(@$item['slug'])>0)
 		{
 			switch( @$item['typeSlug'] )
 			{

@@ -8,14 +8,14 @@
 	<link rel="stylesheet" href="/assets/css/style_temp.css" />
 </head>
 <body class="front">
-<div class="colorbackground">
+<div class="content colorbackground">
 	<header>
 		<div class="masthead">
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li class="home"><a href="#"></a></li>
+							<li class="home"><a href="/"></a></li>
 							<?php
 							foreach( $menu as $item )
 							{
@@ -27,29 +27,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="content">
-<?php echo $content; ?>
+	</header>
+	<section class="main">
+		<?php echo $content; ?>
 
-	</div>
-	<div class="footer">
-		<div class="container">
-			<div class="logo">
-				<h4></h4>
-			</div>
-			<nav class="">
-				<ul>
-				<?php
-				foreach( $submenu as $item )
-				{
-					echo '<li><a href="'.$item->slug.'">'.$item->title.'</a></li>';
-				}
-				?>
-
-				</ul>
-			</nav>
-		</div>
-	</div>
+	</section>
+</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script>
 		if( typeof $ == 'undefined' ) // Google CDN pleite?

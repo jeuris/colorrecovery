@@ -23,9 +23,9 @@ p {
 // Ex: 14px base font * 85% = about 12px
 small   { font-size: 85%; }
 
-strong  { font-weight: normal; font-family: 'proxima_novabold'; }
-em      { font-style: normal; font-family: 'proxima_novaregular_italic'; }
-cite    { font-style: normal; font-family: 'proxima_novalight'; }
+strong  { font-weight: bold; }
+em      { font-style: italic; }
+cite    { font-style: normal; }
 
 
 .text-left           { text-align: left; }
@@ -43,14 +43,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: @baseLineHeight;
   color: @headingsColor;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
-
-}
-
-small {
-  font-weight: normal;
-  line-height: 1;
-  font-family: 'proxima_novaregular_italic';
-  color: @grayLight;
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
 }
 
 h1 { line-height: @baseLineHeight * 4; }
@@ -58,7 +55,7 @@ h2,
 h3 { line-height: @baseLineHeight * 2; }
 
 h1 { font-size: @baseFontSize * 5.75; text-transform: uppercase; }
-h2 { font-size: @baseFontSize * 3.25; white-space: pre-line; }
+h2 { font-size: @baseFontSize * 3.25; }
 h3 { font-size: @baseFontSize * 1.75; } // ~24px
 h4 { font-size: @baseFontSize * 1.25; } // ~18px
 h5 { font-size: @baseFontSize; }

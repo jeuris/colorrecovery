@@ -3,5 +3,6 @@
 
 	</div>
 
-	<div class="hidden" data-editable="true" data-key="url" data-description="Video URL" style="display:none;"><?php echo $json['url']; ?></div>
+	<div class="hidden" data-editable="true" data-key="url" data-description="Video URL" style="display:none;"><?php echo $json['url']; ?>
+	</div>
 </div>

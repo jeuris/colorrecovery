@@ -69,7 +69,7 @@ var Page = {
 
 				 // pagination bar
 				 $container.parent().find('.pagination-bar').empty();
-				 var page_bar = '<div class="pagination-bar"><div class="pagination"><ul>';
+				 var page_bar = '<div class="pagination-bar"><div class="pagination"><ul class="slidertab">';
 				 for( var i=0 ; i<index ; i++ )
 				 {
 					 var pg = i+1;
