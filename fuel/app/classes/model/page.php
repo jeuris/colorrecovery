@@ -133,7 +133,7 @@ class Model_Page extends Model
 		}
 		else
 		{
-			return 1;
+			return false;
 		}
 
 	}

@@ -56,6 +56,10 @@
 
 // KLUDGES - dit samenvoegen
 // ------------------
+.details {
+	background-color: #ccc;
+}
+
 body {
 	background: transparent;
 }
@@ -72,12 +76,38 @@ body {
 	padding-top: 120px;
 }
 
+.header {
+	h1{
+		color: @white;
+		text-transform: none;
+		font-weight: normal;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+		width: 600px;
+	}
+	h2{
+		color: @white;
+		text-transform: none;
+		font-weight: normal;
+		margin-top:1.5em;
+		line-height: 110%;
+		letter-spacing: .1em;
+		font-family: 'proxima_novalight';
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+		width: 650px;
+	}
+}
+
+.listview {
+	height: 900px;
+}
+
 .paginate
 {
 	overflow: hidden;
-	width: 100%;
+	height: 85%;
 	top: 0px;
 	white-space: nowrap;
+	margin-top: 64px;
 
 	.pages
 	{
@@ -87,11 +117,18 @@ body {
 			display: inline-block;
 			vertical-align:top;
 			width: 100%;
+			max-width: 100%;
+			padding:40px 0;
+
+			& > * { white-space: pre-wrap; }
 		}
 	}
 }
 
 .pagination-bar
 {
-	li{ float: left; }
+	margin: 0;
+	li{ float: left; list-style: none; margin: 0; padding: 0; }
 }
+
+ul { margin: 0; }

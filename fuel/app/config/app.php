@@ -177,8 +177,8 @@ return array(
 				'view'				=> 'templates/list',
 				'has_header'		=> false,
 				'default_metadata'	=> array(
-                    'pagination' => 1,
-                    'items' => array(
+					'pagination' => 1,
+					'items' => array(
 						array(
 							'slug'		=> '',
 							'typeSlug'  => '',
@@ -200,7 +200,37 @@ return array(
 						'height' => '600',
 					),
 				),
-			),/*
+			),
+			'slider' => array(
+				'title'				=> 'Slider',
+				'view'				=> 'templates/slider' ,
+				'has_header'		=> false,
+				'default_metadata'	=> array(
+					'pagination' => 1,
+					'items' => array(
+						array(
+							'slug'		=> '',
+							'typeSlug'  => '',
+							'image_id'	=> '-1',
+							'image_url'	=> 'http://',
+							'title'		=> 'Titel',
+							'body'		=> 'Tekst',
+							'url'		=> 'http://',
+						)
+					),
+				),
+				'images' => array(
+					'full'	=> array(
+						'width'  => '1280',
+						'height' => '1024',
+					),
+					'thumb' => array(
+						'width'  => '800',
+						'height' => '600',
+					),
+				),
+			),
+			/*
             'grid' => array(
                 'title'				=> 'Grid',
                 'view'				=> 'templates/grid',

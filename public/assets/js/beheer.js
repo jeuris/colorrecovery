@@ -556,9 +556,15 @@ var PageEditor = {
 				{
 					part = $('#template-'+template_id+' .preview [data-key="image_id"]').index(this);
 				}
+
+				if( ! $(this.parentNode).find('.removeimg').length )
+				{
+					$(this).after('<a title="Afbeelding verwijderen" class="removeimg btn"><i class="icon icon-ban-circle"></i></a>');
+				}
+
 				if( ! $(this.parentNode).find('.croplink').length )
 				{
-					$(this).after('<a class="croplink btn" href="/beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+ part +'" role="button" data-toggle="modal" data-target="#modalWindow"><i class="icon icon-picture"></i></a>');
+					$(this).after('<a title="Afbeelding aanpassen" class="croplink btn" href="/beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+ part +'" role="button" data-toggle="modal" data-target="#modalWindow"><i class="icon icon-picture"></i></a>');
 				}
 				else
 				{
@@ -592,6 +598,12 @@ var PageEditor = {
 			template_id = $(template_id).attr('id').substr(9);
 
 			that.publishTemplate(template_id);
+		});
+
+		// remove image button
+		$('.removeimg').unbind('click').click(function(e){
+			var $item = $(e.target).parents('.template-item');
+			$item.find('.item-image').parents().filter(':first').remove();
 		});
 
         $('.new-item .label').click();
