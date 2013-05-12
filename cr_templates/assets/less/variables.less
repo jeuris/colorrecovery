@@ -79,15 +79,14 @@ hr.dashedline:after {
 .absoluteCenterContact {
   position:relative; /* Contains the image in the div */
   margin-left:0px;
-  padding-top:0px;
+  padding-top:8px;
   pading-left:40px;
   border-bottom: 1px dashed @grayLight;
-  border-right:1px dashed @grayLight;
   &:first-child{ border-top: 1px dashed @grayLight; margin-top:20px; }
 }
 
 .absoluteCenterContact img{
-  padding-left:40px;
+  padding-left:28px;
 
 }
 
@@ -105,7 +104,6 @@ hr.dashedline:after {
   position:relative; /* Contains the image in the div */
   margin-left:0px;
   padding:20px;
-  border-bottom: 1px dashed @grayLight;
   &:first-child{ border-top: 1px dashed @grayLight; margin-top:20px; }
 }
 
@@ -194,11 +192,12 @@ hr.dashedline:after {
 	// Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
 	input,
 	textarea{
-	  width: 206px; // plus 12px padding and 2px border
+	  width: 90%;
 	}
 	// Reset height since textareas have rows
 	textarea {
-	  height: auto;
+	  height: 142px;
+		max-width: 90%;
 	}
 	// Everything else
 	textarea,

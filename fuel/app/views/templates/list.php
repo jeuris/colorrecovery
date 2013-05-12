@@ -5,7 +5,7 @@
 		if( strlen($json['header-label']) > 0 )
 		{
 			echo '<div class="header-label">';
-			echo '<h1>'.str_replace(' ', '<br/>', @$json['header-label']).'<br/></h1>';
+			echo '<h1>'.str_replace(' ', '<br/>', @$json['header-label']).'</h1>';
 			echo '</div>';
 		}
 	}

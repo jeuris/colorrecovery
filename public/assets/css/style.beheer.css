@@ -111,3 +111,6 @@
 .text-columns-view .template-item .text {
   padding: 8px;
 }
+.header-label {
+  display: none;
+}

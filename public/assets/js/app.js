@@ -106,8 +106,8 @@ var Page = {
 
 			var _this = this;
 
-			$(this).find('textarea').after('<br/><br/><a class="rect-btn">send</a>');
-			$(this).find('a.rect-btn').unbind('click').click(function(ev){
+			$(this).find('textarea').after('<br/><br/><button class="sendbutton">send</button>');
+			$(this).find('button.sendbutton').unbind('click').click(function(ev){
 				ev.preventDefault();
 
 				var i    = 0;
@@ -138,7 +138,7 @@ var Page = {
 						}
 						else
 						{
-							$(_this).find('.rect-btn')
+							$(_this).find('.sendbutton')
 							.unbind('click')
 							.animate({opacity:0}, 500, function(){
 								$(this).html('message sent!')

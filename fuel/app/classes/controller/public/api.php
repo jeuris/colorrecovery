@@ -42,10 +42,10 @@ class Controller_Public_API extends Controller_Rest
 		$val->add_field('email', 'Email', 'required|valid_email');
 
 		$target = strrev(str_replace('---','@', Input::post('target')));
-		$from   = array(Input::post('input2')=>Input::post('input1'));
-		$text   = "From: ".Input::post('input2').' ('.Input::post('input1').")\n".'Message: '.Input::post('text1');
+		$from   = Input::post('input2');
+		$text   = "From: ".Input::post('input1').' ('.Input::post('input2').")\n".'Message: '.Input::post('text1');
 
-		if( $val->run(array('email'=>Input::post('input1')))  )
+		if( $val->run(array('email'=>Input::post('input2')))  )
 		{
 			Package::load('swiftmailer');
 			$transport = Swift_SmtpTransport::newInstance('smtp.mxa-dev.com', 2525)

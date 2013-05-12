@@ -70,17 +70,16 @@ hr.dashedline:after {
   /* Contains the image in the div */
 
   margin-left: 0px;
-  padding-top: 0px;
+  padding-top: 8px;
   pading-left: 40px;
   border-bottom: 1px dashed #999999;
-  border-right: 1px dashed #999999;
 }
 .absoluteCenterContact:first-child {
   border-top: 1px dashed #999999;
   margin-top: 20px;
 }
 .absoluteCenterContact img {
-  padding-left: 40px;
+  padding-left: 28px;
 }
 .absoluteCenterContact p {
   margin: 0 0 1em 6.5em;
@@ -97,7 +96,6 @@ hr.dashedline:after {
 
   margin-left: 0px;
   padding: 20px;
-  border-bottom: 1px dashed #999999;
 }
 .BorderContactform:first-child {
   border-top: 1px dashed #999999;
@@ -168,10 +166,11 @@ hr.dashedline:after {
 }
 .front input,
 .front textarea {
-  width: 206px;
+  width: 90%;
 }
 .front textarea {
-  height: auto;
+  height: 142px;
+  max-width: 90%;
 }
 .front textarea,
 .front input[type="text"],
@@ -1415,17 +1414,16 @@ hr.dashedline:after {
   /* Contains the image in the div */
 
   margin-left: 0px;
-  padding-top: 0px;
+  padding-top: 8px;
   pading-left: 40px;
   border-bottom: 1px dashed #999999;
-  border-right: 1px dashed #999999;
 }
 .absoluteCenterContact:first-child {
   border-top: 1px dashed #999999;
   margin-top: 20px;
 }
 .absoluteCenterContact img {
-  padding-left: 40px;
+  padding-left: 28px;
 }
 .absoluteCenterContact p {
   margin: 0 0 1em 6.5em;
@@ -1442,7 +1440,6 @@ hr.dashedline:after {
 
   margin-left: 0px;
   padding: 20px;
-  border-bottom: 1px dashed #999999;
 }
 .BorderContactform:first-child {
   border-top: 1px dashed #999999;
@@ -1513,10 +1510,11 @@ hr.dashedline:after {
 }
 .front input,
 .front textarea {
-  width: 206px;
+  width: 90%;
 }
 .front textarea {
-  height: auto;
+  height: 142px;
+  max-width: 90%;
 }
 .front textarea,
 .front input[type="text"],
@@ -2847,8 +2845,8 @@ hr.dashedline:after {
 }
 .front .header-label h1 {
   color: #3c3c3b;
-  margin-left: 112px;
-  word-wrap: break-word;
+  margin-left: 10%;
+  width: 900px;
 }
 .front .listview {
   background: rgba(255, 255, 255, 0.8);
@@ -2899,4 +2897,15 @@ hr.dashedline:after {
 }
 .front ul {
   margin: 0;
+}
+.front .formholder .contact-details div {
+  text-align: left;
+}
+.front .formholder .template-itemholder {
+  border-right: 1px dashed #999999;
+  width: 105%;
+  min-height: 580px;
+}
+.front .formholder .control-label {
+  display: none;
 }

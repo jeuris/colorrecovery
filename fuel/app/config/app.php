@@ -123,7 +123,7 @@ return array(
 			'item' 					=> 3,
 		),
 
-		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>','<hr>'),
+		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>','<hr>','<cite>'),
 		'allowed_html_attributes'	=> array('href','src','alt', 'style', 'class','type','for','placeholder','value','name','data-pagesize','data-url','id'),
 
 		'templates'	=> array(
@@ -303,14 +303,23 @@ return array(
             'form' => array(
 				'title'				=> 'Formulier',
 				'view'				=> 'templates/form',
-				'has_header'		=> false,
+				'has_header'		=> true,
 				'default_metadata'	=> array(
-					'label1'	=> 'E-mail',
-					'label2'	=> 'Naam',
+					'email'		=> 'E-mail',
+					'tel'		=> 'Telefoon',
+					'misc'		=> 'Fax',
+					'formhead'	=> 'Send us a message',
+					'label1'	=> 'Naam',
+					'label2'	=> 'E-mail',
 					'label3'	=> 'Bericht',
 					'email_to'	=> 'email@adres.com',
 					'text'		=> '<strong>Extra tekst</strong><p>Tekst</p>',
-					'items'		=> array(),
+					'items' 	=> array(
+						array(
+							'title' => 'Type adres',
+							'body'	=> 'Adres',
+						),
+					),
 				),
 				'images' => array(),
 			),
