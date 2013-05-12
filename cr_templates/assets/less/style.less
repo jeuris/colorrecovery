@@ -148,6 +148,50 @@
 		h1{ color: @white; }
 	}
 
+	.text-columns-view {
+		background: rgba(255,255,255,.8);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		min-height: 100%;
+		width: 66%;
+		padding: 130px 0 0 0;
+
+		.template-item {
+			margin: 0;
+			padding: 0;
+			border: 1px dashed @grayLight;
+			border-top: 1px solid transparent;
+
+			.text {
+				padding: 8px;
+			}
+
+			&:nth-child(-n+4) { // = awesome :)
+				border: 1px dashed @grayLight;
+			}
+			&:nth-child(odd) {
+				border-left: 1px solid transparent;
+				border-right: 1px solid transparent;
+			}
+			&:nth-child(even){
+				margin: 0 -1px;
+			}
+			&:last-child {
+				border-right: 1px dashed @grayLight;
+			}
+		}
+	}
+
+	.header-label {
+		display: inline-block;
+		h1{
+			color: @grayDark;
+			margin-left: 112px;
+			word-wrap: break-word;
+		}
+	}
+
 	.listview {
 		background: rgba(255,255,255,.8);
 		position: absolute;
@@ -158,15 +202,6 @@
 		padding: 130px 0 0 0;
 
 		&.container{ margin: 0;}
-
-		.header-label {
-			display: inline-block;
-			h1{
-				color: @grayDark;
-				margin-left: 112px;
-				word-wrap: break-word;
-			}
-		}
 
 		p {
 			display: inline-block;

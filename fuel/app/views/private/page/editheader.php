@@ -10,7 +10,7 @@
 			$pagetype = $pagesubject->page->get_pagetype();
 			if( $pagetype['type'] != 'category' )
 			{
-				echo '<a class="btn btn-danger" data-collection="'.$pagesubject->id.'" onclick="PageManager.deletePage('.$pagesubject->page->id .'">Verwijderen</a>';
+				echo '<a class="btn btn-danger" data-collection="'.$pagesubject->id.'" onclick="PageManager.deletePage('.$pagesubject->page->id .');">Verwijderen</a>';
 
 			}
 			?>

@@ -1,29 +1,26 @@
 <div class="formholder container">
 	<div class="row-fluid">
 		<form class="form-horizontal mailform">
-			<div class="span6">
+			<div class="span12">
 				<div class="control-group">
-					<div data-editable="true" data-key="label1" class="control-label"><?php echo @$json['label1']; ?></div>
+					<div style="display:none;" data-editable="true" data-key="label1" class="control-label"><?php echo @$json['label1']; ?></div>
 					<div class="controls">
 						<input name="input1" type="text" id="inputLabel1" placeholder="<?php echo @$json['label1']; ?>" />
 					</div>
 				</div>
 				<div class="control-group">
-					<div data-editable="true" data-key="label2" class="control-label"><?php echo @$json['label2']; ?></div>
+					<div style="display:none;" data-editable="true" data-key="label2" class="control-label"><?php echo @$json['label2']; ?></div>
 					<div class="controls">
 						<input name="input2" type="text" id="inputLabel2" placeholder="<?php echo @$json['label2']; ?>" />
 					</div>
 				</div>
 				<div class="control-group">
-					<div data-editable="true" data-key="label3" class="control-label"><?php echo @$json['label3']; ?></div>
+					<div style="display:none;" data-editable="true" data-key="label3" class="control-label"><?php echo @$json['label3']; ?></div>
 					<div class="controls">
-						<textarea rows="3" id="textarea">
+						<textarea rows="3" placeholder="<?php echo @$json['label3']; ?>">
 						</textarea>
 					</div>
 				</div>
-			</div>
-			<div class="span6" data-editable="true" data-key="text">
-				<?php echo @$json['text']; ?>
 			</div>
 			<input type="hidden" name="target" value="<?php echo strrev(str_replace('@', '---', @$json['email_to'])); ?>" />
 		</form>

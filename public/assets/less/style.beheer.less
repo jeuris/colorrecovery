@@ -84,14 +84,17 @@
 	.template-item
 	{
 		cursor: -webkit-grab;
+		position: relative;
+
+		.btn{ opacity: 0; }
 
 		&.new-template{ opacity: 0; }
 		&:active{ cursor: -webkit-grabbing; opacity:.89; }
 		&:hover
 		{
 			box-shadow: 0px 0px 4px 0 rgba(0,0,0,.33);
+			.btn{ opacity: 1; }
 		}
-		.remove-item{ position:absolute; right:0px; }
 	}
 
 	select
@@ -137,5 +140,15 @@
 	.caption
 	{
 		text-align: center;
+	}
+}
+
+.text-columns-view
+{
+	.template-item{
+		margin: 0;
+		.text {
+			padding: 8px;
+		}
 	}
 }

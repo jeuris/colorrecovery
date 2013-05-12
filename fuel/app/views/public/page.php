@@ -14,13 +14,16 @@
 			$date.= Inflector::ordinalize( (int)date('j', $updated) ).' ';
 			$date.= date('Y', $updated);
 
-			echo "\n\t\t";
-			echo '<div class="text-side">';
-			echo "\n\t\t\t";
-			echo '<h1>'. str_replace(' ', '<br/>', @$part['data']['header-head'] ).'</h1>';
-			echo "\n\t\t";
-			echo '</div>';
-			echo "\n";
+			if( @strlen(@$part['data']['header-head']) > 0 )
+			{
+				echo "\n\t\t";
+				echo '<div class="text-side">';
+				echo "\n\t\t\t";
+				echo '<h1>'. str_replace(' ', '<br/>', @$part['data']['header-head'] ).'</h1>';
+				echo "\n\t\t";
+				echo '</div>';
+				echo "\n";
+			}
 			$i++;
 		}
 		echo "\t\t";

@@ -366,6 +366,28 @@ return array(
 				),
 				'images' => array(),
 			),
+			'text-columns' => array(
+				'title'				=> 'Tekst met kolommen',
+				'view'				=> 'templates/text-columns',
+				'has_header'		=> true,
+				'default_metadata'	=> array(
+					'items' 	=> array(
+						array(
+							'header'	=> 'Kop 1',
+							'text'		=> 'Tekst kolom 1',
+							'slug'		=> '',
+							'typeSlug'	=> '',
+						),
+						array(
+							'header'	=> 'Kop 2',
+							'text'		=> 'Tekst kolom 2',
+							'slug'		=> '',
+							'typeSlug'	=> '',
+						),
+					),
+				),
+				'images' => array(),
+			),
 			/*
 						'list-detail' => array(
 							'title'				=> 'Lijst detail',
@@ -464,28 +486,6 @@ return array(
 								'text'		=> 'Tekst',
 								'slug'		=> '',
 								'typeSlug'	=> '',
-							),
-							'images' => array(),
-						),
-						'text-columns' => array(
-							'title'				=> 'Tekst met kolommen',
-							'view'				=> 'templates/text-columns',
-							'has_header'		=> false,
-							'default_metadata'	=> array(
-								'items' 	=> array(
-									array(
-										'header'	=> 'Kop 1',
-										'text'		=> 'Tekst kolom 1',
-										'slug'		=> '',
-										'typeSlug'	=> '',
-									),
-									array(
-										'header'	=> 'Kop 2',
-										'text'		=> 'Tekst kolom 2',
-										'slug'		=> '',
-										'typeSlug'	=> '',
-									),
-								),
 							),
 							'images' => array(),
 						),

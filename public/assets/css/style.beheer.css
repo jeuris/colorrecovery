@@ -56,6 +56,10 @@
 }
 .page_editor .template-item {
   cursor: -webkit-grab;
+  position: relative;
+}
+.page_editor .template-item .btn {
+  opacity: 0;
 }
 .page_editor .template-item.new-template {
   opacity: 0;
@@ -67,9 +71,8 @@
 .page_editor .template-item:hover {
   box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.33);
 }
-.page_editor .template-item .remove-item {
-  position: absolute;
-  right: 0px;
+.page_editor .template-item:hover .btn {
+  opacity: 1;
 }
 .page_editor select {
   height: 25px;
@@ -101,4 +104,10 @@
 }
 .gallery .caption {
   text-align: center;
+}
+.text-columns-view .template-item {
+  margin: 0;
+}
+.text-columns-view .template-item .text {
+  padding: 8px;
 }

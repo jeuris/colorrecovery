@@ -2811,6 +2811,45 @@ hr.dashedline:after {
 .front .text-side h1 {
   color: #ffffff;
 }
+.front .text-columns-view {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-height: 100%;
+  width: 66%;
+  padding: 130px 0 0 0;
+}
+.front .text-columns-view .template-item {
+  margin: 0;
+  padding: 0;
+  border: 1px dashed #999999;
+  border-top: 1px solid transparent;
+}
+.front .text-columns-view .template-item .text {
+  padding: 8px;
+}
+.front .text-columns-view .template-item:nth-child(-n+4) {
+  border: 1px dashed #999999;
+}
+.front .text-columns-view .template-item:nth-child(odd) {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.front .text-columns-view .template-item:nth-child(even) {
+  margin: 0 -1px;
+}
+.front .text-columns-view .template-item:last-child {
+  border-right: 1px dashed #999999;
+}
+.front .header-label {
+  display: inline-block;
+}
+.front .header-label h1 {
+  color: #3c3c3b;
+  margin-left: 112px;
+  word-wrap: break-word;
+}
 .front .listview {
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
@@ -2822,14 +2861,6 @@ hr.dashedline:after {
 }
 .front .listview.container {
   margin: 0;
-}
-.front .listview .header-label {
-  display: inline-block;
-}
-.front .listview .header-label h1 {
-  color: #3c3c3b;
-  margin-left: 112px;
-  word-wrap: break-word;
 }
 .front .listview p {
   display: inline-block;
