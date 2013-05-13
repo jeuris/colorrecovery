@@ -1,5 +1,11 @@
 var Interface = {
-	apiUrl : 'http://colorrecovery.dev/public/api/'
+	apiUrl : 'http://colorrecovery.mxa-dev.com/public/public/api/',
+	slider : {
+		index : 1 ,
+		speed : 500,
+		duration: 3000,
+		paused: false,
+	}
 };
 
 var Page = {
@@ -82,7 +88,12 @@ var Page = {
 					 var num = parseInt( $(this).text(), 10 );
 					 Page.paginate(_page, num);
 				 });
+
 				 $container.find('.pagination-bar li:first-child').addClass('active');
+
+				 setTimeout( function(){
+					 Page.moveSlider(_page, 1);
+				 }, Interface.slider.duration );
 			 }
 		});
 	},
@@ -97,6 +108,27 @@ var Page = {
 		container.animate({left:-scroll_to}, 500);
 
 		// todo: scroll pagination bar to last item?
+	},
+
+	moveSlider : function(slider, dir)
+	{
+		var moveTo = Interface.slider.index + dir;
+		var total  = $(slider).find('.page').length;
+
+		if( moveTo > total )
+		{
+			moveTo = 1;
+			Interface.slider.index = 1;
+		}
+
+		if( Interface.slider.paused !== true )
+		{
+			Interface.slider.index = moveTo;
+			Page.paginate(slider, moveTo);
+			setTimeout( function(){
+				Page.moveSlider(slider, 1);
+			}, Interface.slider.duration );
+		}
 	},
 
 	enableContactforms : function() {

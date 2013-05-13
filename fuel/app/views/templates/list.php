@@ -18,11 +18,10 @@
 	foreach($items as $n=>$item)
 	{
 		echo '<div class="row-fluid list-row template-item">';
-		echo '<div class="absoluteCenterWrapper">';
+		echo '<div class="">';
 
 		echo '<div data-editable="true" data-key="slug" style="display:none">' . @$item["slug"] . '</div>';
   		echo '<div data-editable="true" data-key="typeSlug" style="display:none">' . @$item["typeSlug"] . '</div>';
-		echo '<img src="/assets/images/CR_iconholder.svg" />';
 		echo '<p data-editable="true" data-key="body">'. @$item['body'] .'</p>';
 
 		$link = '';
