@@ -41,7 +41,6 @@
 				foreach($items as $n=>$item)
 				{
 					echo '<div class="template-item absoluteCenterContact">';
-					echo '<img src="/assets/images/CR_iconholder.svg" class="absoluteCenter"/>';
 					echo '<p>';
 					echo '<strong data-editable="true" data-key="title">'.@$item['title'].'</strong>';
 					echo '<span data-editable="true" data-key="body">'.@$item['body'].'</span>';

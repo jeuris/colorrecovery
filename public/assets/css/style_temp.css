@@ -1816,7 +1816,7 @@ hr.dashedline:after {
   box-sizing: border-box;
 }
 .front .listview .template-item p {
-  padding-left: 80px;
+  padding-left: 72px;
   padding-right: 48px;
 }
 .front .listview p {
@@ -1864,6 +1864,9 @@ hr.dashedline:after {
   border-right: 1px dashed #999999;
   width: 105%;
   min-height: 580px;
+}
+.front .formholder .template-itemholder .absoluteCenterContact p {
+  padding-left: 16px;
 }
 .front .formholder .control-label {
   display: none;
