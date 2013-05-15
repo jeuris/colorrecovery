@@ -83,7 +83,9 @@ var CropUploader =
 			
 			function showCoords (c)
 			{
-				if(_this.newImage == true)
+                console.log("new image issue with cropper");
+				//if(_this.newImage == true)
+                if(_this.newImage == false)
 				{
 					_this.x1 = c.x * (w / _this.boxWidth);
 					_this.y1 = c.y * (w / _this.boxWidth);
@@ -111,6 +113,8 @@ var CropUploader =
 		var that = this;
 		
 		var data = {"x1" : this.x1, "y1" : this.y1, "x2" : this.x2, "y2" : this.y2, "fullWidth" : this.fullWidth, "fullHeight" : this.fullHeight, "thumbWidth" : this.thumbWidth, "thumbHeight" : this.thumbHeight, "url" : this.url, 'image_id' : this.image_id, 'template_id' : this.template_id, 'item_id' : this.item_id};
+
+        console.log(data);
 
 		$.ajax({
 			type: 		'POST',
@@ -181,7 +185,7 @@ var CropUploader =
 
 		$('.fileuploader').change(function()
 		{
-			var image = $(this).get(0).files[0];
+            var image = $(this).get(0).files[0];
 			_this.uploadFile(image);
 		});
 	},

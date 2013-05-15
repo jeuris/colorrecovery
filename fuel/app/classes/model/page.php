@@ -95,73 +95,13 @@ class Model_Page extends Model
 	}
 	public function clean_html($html)
 	{
-		$stripped		= array();
-		$allowed_tags	= implode('', Config::get('app.app_config.allowed_html_tags'));
-		$allowed_attr	= Config::get('app.app_config.allowed_html_attributes');
-		$strip_when_att = array('display:none','display:none;');
+        $html = \Fuel\Core\Security::xss_clean($html);
+        $html = \Fuel\Core\Security::htmlentities($html);
 
-		$xml = simplexml_load_string('<root>'.str_replace('<br>','<br />'."\n" ,$html).'</root>', 'SimpleXMLElement', 32 | 2);
-
-		if( $xml )
-		{
-			foreach ($xml->xpath('descendant::*[@*]') as $tag)
-			{
-                //echo $kut;
-
-				foreach( $tag->attributes() as $name=>$value)
-				{
-					$dom_ref = dom_import_simplexml($tag);
-
-					if( ! in_array($name, $allowed_attr) )
-					{
-						$tag->attributes()->$name = '';
-						$stripped[$name] = '/ '. $name .'=""/';
-					}
-					// strip tag completely when found in array
-					if( in_array($value, $strip_when_att) )
-					{
-						$dom_ref->parentNode->removeChild($dom_ref);
-					}
-
-				}
-
-               // $xmlobject = new SimpleXMLElement(\Fuel\Core\Markdown::parse($tag));
-               // $tag = $xmlobject;
-
-                // $tag->p = simplexml_load_string(\Fuel\Core\Markdown::parse($tag->p), 'SimpleXMLElement', 32 | 2);
-                // $tag->p = \Fuel\Core\Markdown::parse($tag->div);
-			}
-
-			$dom = new DOMDocument('1.0');
-			$dom->preserveWhiteSpace = false;
-			$dom->formatOutput = true;
-			$dom->loadXML($xml->asXML());
-			$dom->normalizeDocument();
-
-            foreach($dom->getElementsByTagName('p') as $item)
-            {
-               $item->nodeValue = \Fuel\Core\Markdown::parse($item->nodeValue);
-            }
-
-            $dom = $dom->saveXML();
-
-            //exit;
-			$clean_html = strip_tags(preg_replace($stripped, '', $dom), $allowed_tags);
-
-            //echo $clean_html;
-
-			//$clean_html = strip_tags(preg_replace($stripped, '', $xml->asXML()), $allowed_tags);
-
-			$html = preg_replace("/[\r\n\t]+/", "", $clean_html);
-
-            return html_entity_decode($html);
-		}
-		else
-		{
-			return false;
-		}
+        return html_entity_decode($html);
 
 	}
+
     public function get_pagetype()
     {
         $result = array();

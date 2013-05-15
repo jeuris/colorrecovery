@@ -1822,7 +1822,6 @@ hr.dashedline:after {
   padding-right: 30px;
 }
 .front .listview p {
-  display: inline-block;
   padding: 8px 0 0 0;
 }
 .front .listview hr {
@@ -1846,6 +1845,11 @@ hr.dashedline:after {
 }
 .front .paginate .pages .page > * {
   white-space: pre-wrap;
+}
+.front .paginate .pages .page .span4 img {
+  margin: 25% 0 0 0;
+  max-width: 1500px;
+  width: 500px;
 }
 .front .pagination-bar {
   margin: 0;

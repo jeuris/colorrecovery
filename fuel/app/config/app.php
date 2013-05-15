@@ -219,14 +219,15 @@ return array(
 						)
 					),
 				),
+
 				'images' => array(
 					'full'	=> array(
-						'width'  => '1280',
-						'height' => '1024',
+						'width'  => '427',
+						'height' => '88',
 					),
 					'thumb' => array(
-						'width'  => '800',
-						'height' => '600',
+						'width'  => '427',
+						'height' => '88',
 					),
 				),
 			),

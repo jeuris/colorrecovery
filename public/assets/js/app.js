@@ -204,11 +204,13 @@ var List = {
     clean_colors            : [
         'assets/images/CR_icon_leaf.svg',
         'assets/images/CR_icon_prize.svg',
-        'assets/images/CR_icon_bottle.svg'],
+        'assets/images/CR_icon_bottle.svg',
+        'assets/images/CR_icon_flag.svg'],
     certifying_programme    : [
-        'assets/images/CR_icon_leaf.svg',
-        'assets/images/CR_icon_prize.svg',
-        'assets/images/CR_icon_bottle.svg'],
+        'assets/images/CR_icon_prize.svg'],
+    collection_recovery     : [
+        'assets/images/CR_icon_hands.svg',
+        'assets/images/CR_icon_sync.svg'],
     default_image           : 'assets/images/CR_iconholder.svg',
 
     init:function(slug)
@@ -225,6 +227,11 @@ var List = {
         if(module === 'certifying_programme')
         {
             this.replace(this.certifying_programme);
+        }
+
+        if(module === 'collection_recovery')
+        {
+            this.replace(this.collection_recovery);
         }
     },
 

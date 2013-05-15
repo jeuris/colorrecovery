@@ -94,7 +94,7 @@ class Controller_Private_API extends Controller_Private
 		{
 			$data = Input::post();
 		}
-		
+
 		$template = Model_PagesTemplates::find($id);
 		$template->metadata = json_encode($data);
 		$template->save();
@@ -228,6 +228,7 @@ class Controller_Private_API extends Controller_Private
             'randomize' => true,
             'ext_whitelist' => array('jpg', 'jpeg', 'gif', 'png'),
         );
+
 
         Upload::process($config);
 		

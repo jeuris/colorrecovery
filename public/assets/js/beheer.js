@@ -197,6 +197,7 @@ var PageEditor = {
 
 	ready:		false,
 	page_id:	'',
+    rootUrl:    '',
 
 	init : function(newItem) {
 		var that = this;
@@ -306,7 +307,7 @@ var PageEditor = {
 				var div = e.target;
 				setTimeout(function(){
 					$(div).html( $(div).text() );
-				}, 1);
+				}, 50);
 			});
 
 			$(this).blur(function(e){
@@ -546,6 +547,8 @@ var PageEditor = {
 				});
 			}
 		});
+
+        that.rootUrl = $('.main').data('url');
 		
 		// enable image modal links, croptool
 		$('[data-key="image_id"]').each(function(){
@@ -568,11 +571,11 @@ var PageEditor = {
 
 				if( ! $(this.parentNode).find('.croplink').length )
 				{
-					$(this).after('<a title="Afbeelding aanpassen" class="croplink btn" href="/beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+ part +'" role="button" data-toggle="modal" data-target="#modalWindow"><i class="icon icon-picture"></i></a>');
+					$(this).after('<a title="Afbeelding aanpassen" class="croplink btn" href="'+that.rootUrl+'beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+ part +'" role="button" data-toggle="modal" data-target="#modalWindow"><i class="icon icon-picture"></i></a>');
 				}
 				else
 				{
-					$(this.parentNode).find('.croplink').attr('href', '/beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+part);
+					$(this.parentNode).find('.croplink').attr('href', that.rootUrl+ 'beheer/modal/imagecropper/'+ image_id +'/'+template_id+'/'+part);
 				}
 			}
 		});
@@ -746,6 +749,7 @@ var PageEditor = {
 			dataType:	'json',
 			complete: function(e) {},
 			success: function(e) {
+
 				$('li#template-'+id+' [data-key="slug"]').each(function(){
 					var index = $('li#template-'+id+' [data-key="slug"]').index(this);
 					if( e && e.slugs )
