@@ -29,6 +29,7 @@ class Controller_Public extends Controller_Hybrid
 					'sort' => 'asc'
 				),
 			));
+
 			$submenu = Model_Subcategory::find('all', array(
 				'where'	   => array(
 					'category_id' => '2',

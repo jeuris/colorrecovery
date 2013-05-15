@@ -198,6 +198,54 @@ var Page = {
 	}
 };
 
+var List = {
+
+    root                    : '',
+    clean_colors            : [
+        'assets/images/CR_icon_leaf.svg',
+        'assets/images/CR_icon_prize.svg',
+        'assets/images/CR_icon_bottle.svg'],
+    certifying_programme    : [
+        'assets/images/CR_icon_leaf.svg',
+        'assets/images/CR_icon_prize.svg',
+        'assets/images/CR_icon_bottle.svg'],
+    default_image           : 'assets/images/CR_iconholder.svg',
+
+    init:function(slug)
+    {
+        var module = slug.replace("-", "_");
+
+        this.root = $('.content').data('url');
+
+        if(module === 'clean_colors')
+        {
+            this.replace(this.clean_colors);
+        }
+
+        if(module === 'certifying_programme')
+        {
+            this.replace(this.certifying_programme);
+        }
+    },
+
+    replace:function(datasource)
+    {
+        var _this = this;
+        $('.template-item').each(function(index, item)
+        {
+           var img = datasource[index];
+
+           if(img == undefined)
+           {
+               img = _this.default_image;
+           }
+
+           $(this).css('background-image', 'url(' + _this.root + img + ')');
+        });
+    }
+
+}
+
 $(document).ready(function(e){
 	Page.init();
 });

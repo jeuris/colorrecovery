@@ -1,12 +1,12 @@
 .colorbackground {
   height: 100%;
-  background: url("../images/CR_background.png") no-repeat center center fixed;
+  background: url("../images/CR_background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.jpg', sizingMethod='scale')";
 }
 ul.slidertab li a,
 ul.slidertab li.active {
@@ -1162,7 +1162,7 @@ address {
   left: 0;
   display: block;
   float: left;
-  margin: 0 10px 0 0;
+  margin: 0 0 0 0;
 }
 .navbar .nav.pull-right {
   float: right;
@@ -1344,13 +1344,13 @@ address {
 }
 .colorbackground {
   height: 100%;
-  background: url("../images/CR_background.png") no-repeat center center fixed;
+  background: url("../images/CR_background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/CR_background.jpg', sizingMethod='scale')";
 }
 ul.slidertab li a,
 ul.slidertab li.active {
@@ -1753,12 +1753,14 @@ hr.dashedline:after {
 .front .text-side {
   width: 30%;
   position: fixed;
-  bottom: 0px;
+  top: 50%;
+  margin-top: -190px;
   right: 68%;
   text-align: right;
 }
 .front .text-side h1 {
   color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 .front .text-columns-view {
   background: rgba(255, 255, 255, 0.8);
@@ -1793,11 +1795,11 @@ hr.dashedline:after {
 }
 .front .header-label {
   display: inline-block;
+  margin-left: 50px;
 }
 .front .header-label h1 {
   color: #3c3c3b;
   margin-left: 10%;
-  width: 900px;
 }
 .front .listview {
   background: rgba(255, 255, 255, 0.8);
@@ -1812,12 +1814,12 @@ hr.dashedline:after {
   margin: 0;
 }
 .front .listview .template-item {
-  background: transparent url(/assets/images/CR_iconholder.svg) no-repeat 16px 20%;
+  background: transparent url(/assets/images/CR_iconholder.svg) no-repeat 25px 30%;
   box-sizing: border-box;
 }
 .front .listview .template-item p {
-  padding-left: 72px;
-  padding-right: 48px;
+  padding-left: 85px;
+  padding-right: 30px;
 }
 .front .listview p {
   display: inline-block;

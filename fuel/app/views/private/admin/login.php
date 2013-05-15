@@ -3,22 +3,24 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Login</title>
-	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-	<link rel="stylesheet" href="/assets/css/style.default.css" type="text/css" />
-	<link rel="stylesheet" href="/assets/css/style.beheer.css" type="text/css" />
-	<script type="text/javascript" src="/assets/js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery-ui-1.9.2.min.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.flot.min.js"></script>
-	<script type="text/javascript" src="/assets/js/jquery.flot.resize.min.js"></script>
-	<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/assets/js/custom.js"></script>
-	<script type="text/javascript" src="/assets/js/beheer.js"></script>
-	<script type="text/javascript" src="/assets/js/cropUploader.js"></script>
-	<script type='text/javascript' src="/assets/jwplayer/jwplayer.js"></script>
-	<script type='text/javascript' src="/assets/js/jquery.columnview.js"></script>
+    <?php
+    echo Asset::css('style.css');
+    echo Asset::css('style.default.css');
+    echo Asset::css('style.beheer.css');
+    echo Asset::js('jquery-1.8.3.min.js');
+    echo Asset::js('jquery-ui-1.9.2.min.js');
+    echo Asset::js('jquery.flot.min.js');
+    echo Asset::js('jquery.flot.resize.min.js');
+    echo Asset::js('bootstrap.min.js');
+    echo Asset::js('custom.js');
+    echo Asset::js('beheer.js');
+    echo Asset::js('cropUploader.js');
+    echo Asset::js('jwplayer/jwplayer.js');
+    echo Asset::js('jquery.columnview.js');
+    echo Asset::js('jquery.Jcrop.js');
+    echo Asset::css('jquery.Jcrop.css');
 
-	<script type="text/javascript" src="/assets/js/jquery.Jcrop.js"></script>
-	<link rel="stylesheet" href="/assets/css/jquery.Jcrop.css" type="text/css" />
+    ?>
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
 
@@ -28,7 +30,7 @@
 	<div class="loginwrap zindex100 animate2 bounceInDown">
 		<h1 class="logintitle">Log in</h1>
 		<div class="loginwrapperinner">
-			<form id="loginform" action="/beheer/login" method="post">
+			<form id="loginform" action="" method="post">
 				<p class="animate4 bounceIn"><input type="text" id="username" name="username" placeholder="Username" /></p>
 				<p class="animate5 bounceIn"><input type="password" id="password" name="password" placeholder="Password" /></p>
 				<p class="animate6 bounceIn"><button class="btn btn-default btn-block" style="width:100%;">Submit</button></p>

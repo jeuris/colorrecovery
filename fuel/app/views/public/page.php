@@ -14,23 +14,22 @@
 			$date.= Inflector::ordinalize( (int)date('j', $updated) ).' ';
 			$date.= date('Y', $updated);
 
-			if( @strlen(@$part['data']['header-head']) > 0 )
+            $headerhead = \Arr::get($part, 'data.header-head');
+
+			if(!empty($headerhead))
 			{
-				echo "\n\t\t";
-				echo '<div class="text-side">';
-				echo "\n\t\t\t";
-				echo '<h1>'. str_replace(' ', '<br/>', @$part['data']['header-head'] ).'</h1>';
-				echo "\n\t\t";
-				echo '</div>';
-				echo "\n";
+                echo '
+                <div class="text-side">
+                    <h1>WE<br />WANT<br /><span class="red">CLEAN</span><br />COLORS!</h1>
+                    <img style="width:150px" src="'.Uri::base().'assets/images/CR_fp_logo.png" />
+                </div>';
 			}
 			$i++;
 		}
-		echo "\t\t";
-		echo '<div class="'.$template_id.'">';
-		echo "\n\t\t\t";
-		echo $part[$template_id];
-		echo "\n\t\t";
-		echo '</div>';
+
+        echo '
+            <div class="'.$template_id.'">
+            ' . $part[$template_id] . '
+            </div>';
 	}
 

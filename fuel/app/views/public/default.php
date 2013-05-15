@@ -5,10 +5,10 @@
 	<title><?php echo $page_title; ?></title>
 	<meta name="author" content="maximumawesome.nl" />
 	<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
-	<link rel="stylesheet" href="/assets/css/style_temp.css" />
+    <?php echo Asset::css('style_temp.css'); ?>
 </head>
 <body class="front colorbackground">
-<div class="content">
+<div class="content" data-url="<?php echo Uri::base(); ?>">
 	<header>
 		<div class="masthead">
 			<div class="navbar">
@@ -50,7 +50,20 @@
 			document.write('<scr'+'ipt src="/assets/js/jquery-1.8.3.min.js"></scr'+'ipt>');
 		}
 	</script>
-	<script type="text/javascript" src="/assets/js/app.js"></script>
-	<script type='text/javascript' src="/assets/jwplayer/jwplayer.js"></script>
+
+    <?php
+    echo Asset::js('app.js');
+    echo Asset::js('jwplayer/jwplayer.js');
+    ?>
+        <?php
+
+            if(isset($script))
+            {
+                echo '<script>';
+                echo $script;
+                echo '</script>';
+            }
+
+        ?>
 </body>
 </html>

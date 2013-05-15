@@ -123,7 +123,7 @@ return array(
 			'item' 					=> 3,
 		),
 
-		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>','<hr>','<cite>'),
+		'allowed_html_tags'			=> array('<h1>','<h2>','<h3>','<h4>','<h5>','<h6>','<p>','<a>','<strong>','<em>','<b>','<i>','<img>','<ul>','<ol>','<li>','<div>','<section>','<form>','<input>','<textarea>','<br>','<hr>','<cite>', '<script>'),
 		'allowed_html_attributes'	=> array('href','src','alt', 'style', 'class','type','for','placeholder','value','name','data-pagesize','data-url','id'),
 
 		'templates'	=> array(
@@ -164,11 +164,11 @@ return array(
 				'images' => array(
 					'full'	=> array(
 						'width'  => '100%',
-						'height' => '500px',
+						'height' => '960px',
 					),
 					'thumb' => array(
 						'width'  => '100%',
-						'height' => '500px',
+						'height' => '960px',
 					),
 				),
 			),

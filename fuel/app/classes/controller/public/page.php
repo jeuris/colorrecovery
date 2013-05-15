@@ -29,6 +29,7 @@ class Controller_Public_Page extends Controller_Public
 		{
 			$this->data['page_templates'] = $page->html_array();
 			$this->template->content = View::forge('public/page', $this->data);
+            $this->template->script = 'List.init("' . $slug . '");';
 		}
 		else
 		{

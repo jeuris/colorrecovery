@@ -142,10 +142,14 @@
 	.text-side {
 		width: 30%;
 		position: fixed;
-		bottom: 0px;
+		top: 50%;
+        margin-top:-190px;
 		right: 68%;
 		text-align: right;
-		h1{ color: @white; }
+		h1{
+          color: @white;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+        }
 	}
 
 	.text-columns-view {
@@ -185,10 +189,11 @@
 
 	.header-label {
 		display: inline-block;
+		margin-left: 50px;
 		h1{
 			color: @grayDark;
 			margin-left: 10%;
-			width: 900px;
+			//width: 900px;
 		}
 	}
 
@@ -204,12 +209,12 @@
 		&.container{ margin: 0;}
 
 		.template-item {
-			background: transparent url(/assets/images/CR_iconholder.svg) no-repeat 16px 20%;
+			background: transparent url(/assets/images/CR_iconholder.svg) no-repeat 25px 30%;
 			box-sizing: border-box;
 
 			p{
-				padding-left: 72px;
-				padding-right: 48px;
+				padding-left: 85px;
+				padding-right: 30px;
 			}
 		}
 

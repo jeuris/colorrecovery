@@ -1,4 +1,4 @@
-SetEnvIf Host steiner.dev   	FUEL_ENV=development
+SetEnvIf Host colorrecovery.com FUEL_ENV=production
 SetEnvIf Host localhost     	FUEL_ENV=development
 
 php_flag magic_quotes_gpc Off

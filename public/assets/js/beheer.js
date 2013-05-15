@@ -8,6 +8,7 @@ $('document').ready(function() {
 
 	PageManager.init();
 	PageEditor.init();
+
 });
 
 var PageManager = {
@@ -17,6 +18,9 @@ var PageManager = {
 	currentSlugType: "",
 
 	init : function() {
+
+        this.apiUrl = $('.main').data('url') + 'beheer/api/';
+
 		$('#modalWindow').on('hidden', function(){
 			$(this).removeData('modal');
 		});		
@@ -641,8 +645,16 @@ var PageEditor = {
 				$('#modalWindow').modal('hide');
                 that.init();
 			},
-			error: function(e) {},
-			complete: function(e) {}
+			error: function(e) {
+
+                console.log(e);
+
+            },
+			complete: function(e) {
+
+
+
+            }
 		});
 	},
 
