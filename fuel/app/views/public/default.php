@@ -15,7 +15,7 @@
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li class="home"><a href="/"></a></li>
+							<li class="home"><a href="<?php echo Uri::base(); ?>"></a></li>
 							<?php
 							$current = Uri::segment(count(Uri::segments())); // last segment
 							foreach( $menu as $item )
