@@ -706,7 +706,7 @@ var PageEditor = {
 				if( ! $(this).parents('.template-itemholder').length )
 				{
 					var k = $(this).data('key');
-					var v = $(this).html();
+					var v = $(this).text();
 					data += '&'+k+'='+v;
 				}
 			});
@@ -716,7 +716,7 @@ var PageEditor = {
 				var elements = $(this).find('[data-editable]');
 				elements.each(function(){
 					var k = $(this).data('key');
-					var v = $(this).html();
+					var v = $(this).text();
 
 					data += '&item'+i+'-'+k+'='+v;
 				});
@@ -726,7 +726,7 @@ var PageEditor = {
 		{
 			$('li#template-'+id+' [data-editable]').each(function(){
 				var k = $(this).data('key');
-				var v = $(this).html();
+				var v = $(this).text();
 				data += '&'+k+'='+v;
 			});
 		}
