@@ -43,7 +43,7 @@
 			{
 				foreach($menu as $item)
 				{
-					echo '<li class="nav-header" style="padding:0"><a href="/beheer/page/edit/'.$item->page->id.'">' . $item->title . '</li>';
+					echo '<li class="nav-header" style="padding:0"><a href="' . Uri::base() . '/beheer/page/edit/'.$item->page->id.'">' . $item->title . '</li>';
 
 					if( isset( $item->subcategories ) )
 					{
